@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="dataSourceStorage" format="xml" hash="215041678">
+    <data-source source="LOCAL" name="Data Source" uuid="9b7dd7d3-1b26-4dbd-9129-a901a02c0511">
+      <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mysql://localhost/exomobile</jdbc-url>
+      <user-name>root</user-name>
+      <schema-pattern>exomobile.*</schema-pattern>
+      <default-schemas>exomobile.*</default-schemas>
+      <default-dialect>MySQL</default-dialect>
+      <libraries>
+        <library>
+          <url>jar:///opt/mysql-connector-java-5.1.22-bin.jar!/</url>
+        </library>
+        <library>
+          <url>file:///opt/mysql-connector-license.txt</url>
+        </library>
+      </libraries>
+    </data-source>
+  </component>
+</application>
+

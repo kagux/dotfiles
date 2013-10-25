@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="UsagesStatistic" time="1350924242889" allowed="false" show-notification="false" period="weekly">
+    <group id="JavaScript versions" priority="0.0" data="DEFAULT=7" />
+    <group id="Look and Feel" priority="0.0" data="Linux - gnome - Alloy. Bedoin Theme=1" />
+    <group id="features counts" priority="0.0" data="execute.PHPUnitRunConfigurationType.Run=68,execute.PHPUnitRunConfigurationType.Coverage=1,execute.PHPUnitRunConfigurationType.Debug=2" />
+    <group id="file-type" priority="0.0" data="YAML=3,Smarty=2,JavaScript=4,PHP=4,LESS=1,Twig=1,HTML=3,Locale=1,SQL=2,Native=2,Images=4,DTD=1,JSON=2,htaccess=3,UNKNOWN=4,PHAR=2,CSS=4,C++=1,PLAIN_TEXT=4,ReST=2,ARCHIVE=3,XML=4,SCSS=1,SASS=1,Bash=3" />
+    <group id="javaScript Scope Usages" priority="0.0" data="Project=76" />
+    <group id="module type" priority="0.0" data="WEB_MODULE=7" />
+    <group id="non-bundled-plugins" priority="0.0" data="com.intellij=1,BashSupport=1,Key promoter=1,BrowseWordAtCaret=1,Referencer=1" />
+    <group id="php-debug-skipped-paths" priority="0.0" data="0=7" />
+    <group id="php-include-path" priority="0.0" data="0=6,2=1" />
+    <group id="php-interpreter-debug-ext" priority="0.0" data="xdebug=1" />
+    <group id="php-interpreter-version" priority="0.0" data="not installed=6,5.3.10-1ubuntu3.2=1" />
+    <group id="php-interpreters" priority="0.0" data="0=0,1=7" />
+    <group id="php-server-debug-ext" priority="0.0" data="xdebug=2" />
+    <group id="php-servers" priority="0.0" data="1=2,0=2,2=1,3=2" />
+    <group id="productivity" priority="0.0" data="navigation.goto.declaration=1036,refactoring.inlineVariable=53,editing.completion.finishByDotEtc=30,ui.tree.speedsearch=9,editing.select.word=4347,refactoring.rename=318,editing.completion.replace=3042,refactoring.introduceVariable=9,codeassists.comment.line=872,editing.completion.camelHumps=65,editing.completion.basic=4347,navigation.recent.files=2,refactoring.introduceConstant=9,navigation.popup.action=2,navigation.popup.file=2,navigation.popup.class=2" />
+    <group id="run-configuration-type" priority="0.0" data="PHPUnitRunConfigurationType=3,PhpRemoteDebugRunConfigurationType=1" />
+    <group id="vcs" priority="0.0" data="Git=6" />
+  </component>
+</application>
+

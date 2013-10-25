@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="PasswordDatabase">
+    <option name="PASSWORDS">
+      <array>
+        <array>
+          <option value="c4480c48a94fddd2ea8ae02fb5b82304e9c1a136447d488e7a63ddf8381b4657" />
+          <option value="22b201a61861a1a891014be580cff97cc3820eb0497eba7127f8489886ba9697" />
+          <option value="33698e236cb79cbe49807571b305b8ad26e45fb849d5f90e895adb9ecbcd043b" />
+          <option value="34bf839cf522081ce42c026455e527e6e805bddaa4ef9cd11f5bf515303a0056" />
+        </array>
+        <array>
+          <option value="6963f36f78f23c674b43a261a5656145" />
+          <option value="6963f36f78f23c674b43a261a5656145" />
+          <option value="c89810eaf82ce562852d71702c755211c1b81f5c4894edd609fba5df5e5fec52" />
+          <option value="6963f36f78f23c674b43a261a5656145" />
+        </array>
+      </array>
+    </option>
+  </component>
+  <component name="SSHConnectionSettings">
+    <successfulAuthentication user="git@git.bonprofit.in" method="publickey" />
+    <successfulAuthentication user="git@git.exoclick.com" method="publickey" />
+    <successfulAuthentication user="git@github.com" method="publickey" />
+  </component>
+</application>
+

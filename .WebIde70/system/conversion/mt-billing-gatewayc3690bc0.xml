@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conversion>
+  <applied-converters>
+    <converter id="js-debug-configuration-converter" />
+    <converter id="js-libraries-roots" />
+    <converter id="js-predefined-libraries-merged" />
+  </applied-converters>
+  <project-files>
+    <file path="/home/boris/Projects/mt-billing-gateway/.idea/encodings.xml" timestamp="1373376586000" />
+    <file path="/home/boris/Projects/mt-billing-gateway/.idea/misc.xml" timestamp="1373376586000" />
+    <file path="/home/boris/Projects/mt-billing-gateway/.idea/modules.xml" timestamp="1373376586000" />
+    <file path="/home/boris/Projects/mt-billing-gateway/.idea/mt-billing-gateway.iml" timestamp="1373376586000" />
+    <file path="/home/boris/Projects/mt-billing-gateway/.idea/scopes/scope_settings.xml" timestamp="1373376586000" />
+    <file path="/home/boris/Projects/mt-billing-gateway/.idea/vcs.xml" timestamp="1373376586000" />
+    <file path="/home/boris/Projects/mt-billing-gateway/.idea/workspace.xml" timestamp="1373633163000" />
+  </project-files>
+</conversion>
+

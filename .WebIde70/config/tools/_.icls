@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<toolSet>
+  <tool name="PHPSpec" showInMainMenu="true" showInEditor="true" showInProject="true" showInSearchPopup="true" disabled="false" useConsole="true" showConsoleOnStdOut="false" showConsoleOnStdErr="false" synchronizeAfterRun="true">
+    <exec>
+      <option name="COMMAND" value="$USER_HOME$/Projects/exo-mobiletubes/bin/phpspec" />
+      <option name="PARAMETERS" value="run" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/Projects/exo-mobiletubes" />
+    </exec>
+  </tool>
+</toolSet>
+

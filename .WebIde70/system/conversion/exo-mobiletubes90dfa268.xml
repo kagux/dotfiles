@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<conversion>
+  <applied-converters>
+    <converter id="js-debug-configuration-converter" />
+    <converter id="js-libraries-roots" />
+    <converter id="js-predefined-libraries-merged" />
+  </applied-converters>
+  <project-files>
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/dictionaries/boris.xml" timestamp="1370005778000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/encodings.xml" timestamp="1346346216000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/exo-mobiletubes.iml" timestamp="1369307005000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/inspectionProfiles/Project_Default.xml" timestamp="1359547904000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/inspectionProfiles/profiles_settings.xml" timestamp="1355922452000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/jsLinters/jslint.xml" timestamp="1351068068000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/libraries/sass_stdlib.xml" timestamp="1351068263000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/misc.xml" timestamp="1346401408000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/modules.xml" timestamp="1346346216000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/scopes/scope_settings.xml" timestamp="1346346216000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/sqldialects.xml" timestamp="1369821254000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/vcs.xml" timestamp="1373018810000" />
+    <file path="/home/boris/Projects/exo-mobiletubes/.idea/workspace.xml" timestamp="1373966070000" />
+  </project-files>
+</conversion>
+

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application>
+  <component name="VimSettings">
+    <state version="2" enabled="true" keymap="Vim_k" />
+    <globalmarks />
+    <filemarks>
+      <file name="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Cookie/VisitorCookie.php" timestamp="1370509142046">
+        <mark key="'" line="29" column="4" />
+        <mark key="]" line="26" column="25" />
+        <mark key="^" line="26" column="25" />
+        <mark key="." line="26" column="25" />
+        <mark key="k" line="12" column="46" />
+        <mark key="[" line="26" column="60" />
+      </file>
+      <file name="$USER_HOME$/Projects/exomobile-reports-bundle/src/Exomobile/ReportsBundle/Report/ReportBuilder.php" timestamp="1382698835543">
+        <mark key="'" line="113" column="0" />
+        <mark key="]" line="100" column="0" />
+        <mark key="." line="100" column="0" />
+        <mark key="[" line="100" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/exo-mobiletubes/lib/MobileTubes/Tracker/VisitorSessionFactory.php" timestamp="1370439199936">
+        <mark key="]" line="4" column="0" />
+        <mark key="^" line="14" column="69" />
+        <mark key="." line="4" column="0" />
+        <mark key="[" line="4" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/admin.mobiletubes.com/src/Exomobile/ClientReportsBundle/Resources/config/config.yml" timestamp="1370512277939">
+        <mark key="]" line="2" column="43" />
+        <mark key="^" line="2" column="44" />
+        <mark key="." line="2" column="43" />
+        <mark key="[" line="2" column="43" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/vendor/exomobile/reports-bundle/src/Exomobile/ReportsBundle/Dimension/Filter/Op1Filter.php" timestamp="1382711068807">
+        <mark key="]" line="6" column="22" />
+        <mark key="." line="6" column="22" />
+        <mark key="[" line="6" column="21" />
+      </file>
+      <file name="$USER_HOME$/Projects/analytics/spec/Exomobile/Analytics/Visitor/Key/VisitorKeySpec.php" timestamp="1370360591531">
+        <mark key="]" line="2" column="43" />
+        <mark key="." line="2" column="43" />
+        <mark key="[" line="2" column="43" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/vendor/exomobile/pdf-bundle/Exomobile/PDFBundle/composer.json" timestamp="1370264307386">
+        <mark key="]" line="21" column="0" />
+        <mark key="^" line="21" column="0" />
+        <mark key="." line="21" column="0" />
+        <mark key="[" line="22" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Controller/AdminReportController.php" timestamp="1382709570552">
+        <mark key="'" line="59" column="8" />
+        <mark key="]" line="49" column="77" />
+        <mark key="^" line="49" column="77" />
+        <mark key="." line="49" column="77" />
+        <mark key="[" line="49" column="52" />
+      </file>
+      <file name="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Manager/VisitorManager.php" timestamp="1370364534120">
+        <mark key="'" line="1" column="38" />
+        <mark key="]" line="48" column="0" />
+        <mark key="^" line="48" column="48" />
+        <mark key="." line="48" column="0" />
+        <mark key="[" line="25" column="62" />
+      </file>
+      <file name="$USER_HOME$/Projects/analytics/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php" timestamp="1370360184841">
+        <mark key="'" line="619" column="4" />
+        <mark key="]" line="618" column="0" />
+        <mark key="^" line="618" column="0" />
+        <mark key="." line="618" column="0" />
+        <mark key="[" line="618" column="4" />
+      </file>
+      <file name="/fragment.php" timestamp="1370439516189">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/exomobile-reports-bundle/src/Exomobile/ReportsBundle/ReportCollection/InvalidTimeUnitException.php" timestamp="1382700143718">
+        <mark key="]" line="7" column="52" />
+        <mark key="^" line="7" column="52" />
+        <mark key="." line="7" column="52" />
+        <mark key="[" line="7" column="51" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Resources/views/Report/by_op1.html.twig" timestamp="1382712090856">
+        <mark key="]" line="3" column="0" />
+        <mark key="." line="3" column="0" />
+        <mark key="[" line="3" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/analytics/spec/Exomobile/Analytics/TrackerSpec.php" timestamp="1370358864103">
+        <mark key="]" line="22" column="54" />
+        <mark key="^" line="22" column="54" />
+        <mark key="." line="22" column="54" />
+        <mark key="[" line="22" column="54" />
+      </file>
+      <file name="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Session/VisitorSession.php" timestamp="1370508539474">
+        <mark key="'" line="38" column="66" />
+        <mark key="]" line="36" column="0" />
+        <mark key="^" line="38" column="40" />
+        <mark key="." line="36" column="0" />
+        <mark key="[" line="36" column="67" />
+      </file>
+      <file name="/a.dummy" timestamp="1370508711521">
+        <mark key="[" line="0" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/analytics/spec/Exomobile/Analytics/Visitor/Cookie/VisitorCookieSpec.php" timestamp="1370509116592">
+        <mark key="'" line="24" column="15" />
+        <mark key="]" line="40" column="0" />
+        <mark key="^" line="40" column="7" />
+        <mark key="." line="40" column="0" />
+        <mark key="[" line="40" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/exo-mobiletubes/src/app.php" timestamp="1370439320916">
+        <mark key="]" line="110" column="0" />
+        <mark key="." line="110" column="0" />
+        <mark key="[" line="110" column="0" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Resources/views/layout.html.twig" timestamp="1382712028606">
+        <mark key="'" line="19" column="150" />
+        <mark key="]" line="19" column="150" />
+        <mark key="^" line="19" column="150" />
+        <mark key="." line="19" column="150" />
+        <mark key="[" line="19" column="150" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/composer.json" timestamp="1370442759715">
+        <mark key="'" line="82" column="9" />
+        <mark key="]" line="82" column="11" />
+        <mark key="^" line="82" column="11" />
+        <mark key="." line="82" column="11" />
+        <mark key="[" line="82" column="9" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Resources/config/routing.yml" timestamp="1382709482304">
+        <mark key="'" line="0" column="0" />
+        <mark key="]" line="38" column="73" />
+        <mark key="^" line="38" column="73" />
+        <mark key="." line="38" column="73" />
+        <mark key="[" line="38" column="71" />
+      </file>
+      <file name="$USER_HOME$/Projects/exo-mobiletubes/bin/rebill_orange-es.php" timestamp="1370509897208">
+        <mark key="]" line="39" column="43" />
+        <mark key="." line="39" column="43" />
+        <mark key="[" line="39" column="43" />
+      </file>
+      <file name="$USER_HOME$/Projects/exomobile-reports-bundle/src/Exomobile/ReportsBundle/Report/CalculatedMeasure.php" timestamp="1382701812763">
+        <mark key="'" line="17" column="4" />
+        <mark key="]" line="14" column="7" />
+        <mark key="^" line="14" column="7" />
+        <mark key="." line="14" column="7" />
+        <mark key="[" line="12" column="54" />
+      </file>
+      <file name="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Key/VisitorKey.php" timestamp="1370360582027">
+        <mark key="]" line="2" column="38" />
+        <mark key="." line="2" column="38" />
+        <mark key="[" line="2" column="38" />
+      </file>
+      <file name="$USER_HOME$/Projects/analytics/spec/Exomobile/Analytics/Visitor/Session/VisitorSessionSpec.php" timestamp="1370506628726">
+        <mark key="[" line="26" column="4" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/VideosManagementBundle/Command/UpdateThumbsRatingsCommand.php" timestamp="1370441831782">
+        <mark key="]" line="26" column="44" />
+        <mark key="^" line="26" column="44" />
+        <mark key="." line="26" column="44" />
+        <mark key="[" line="26" column="34" />
+      </file>
+      <file name="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/VideosManagementBundle/Command/FindCorruptedThumbsCommand.php" timestamp="1370449892246">
+        <mark key="]" line="35" column="105" />
+        <mark key="^" line="35" column="105" />
+        <mark key="." line="35" column="105" />
+        <mark key="[" line="35" column="81" />
+      </file>
+    </filemarks>
+    <jumps>
+      <jump line="26" column="4" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/EntitiesManagementBundle/Admin/VideoImageAdmin.php" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/EntitiesManagementBundle/Admin/VideoImageAdmin.php" />
+      <jump line="21" column="1" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/EntitiesManagementBundle/Admin/VideoImageAdmin.php" />
+      <jump line="18" column="4" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/EntitiesManagementBundle/Admin/VideoImageAdmin.php" />
+      <jump line="25" column="4" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/EntitiesManagementBundle/Admin/VideoImageAdmin.php" />
+      <jump line="23" column="4" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/EntitiesManagementBundle/Admin/VideoImageAdmin.php" />
+      <jump line="24" column="0" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/EntitiesManagementBundle/Admin/VideoImageAdmin.php" />
+      <jump line="2" column="50" filename="$USER_HOME$/Projects/analytics/spec/Exomobile/Analytics/Visitor/Manager/VisitorManagerSpec.php" />
+      <jump line="1" column="38" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Manager/VisitorManager.php" />
+      <jump line="619" column="4" filename="$USER_HOME$/Projects/analytics/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/Response.php" />
+      <jump line="1" column="0" filename="$USER_HOME$/Projects/analytics/vendor/symfony/http-foundation/Symfony/Component/HttpFoundation/ResponseHeaderBag.php" />
+      <jump line="24" column="15" filename="$USER_HOME$/Projects/analytics/spec/Exomobile/Analytics/Visitor/Cookie/VisitorCookieSpec.php" />
+      <jump line="17" column="0" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Cookie/VisitorCookie.php" />
+      <jump line="12" column="25" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Cookie/VisitorCookie.php" />
+      <jump line="82" column="9" filename="$USER_HOME$/Projects/management.mobiletubes.com/composer.json" />
+      <jump line="25" column="33" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/VideosManagementBundle/Command/FindCorruptedThumbsCommand.php" />
+      <jump line="20" column="0" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/VideosManagementBundle/Command/FindCorruptedThumbsCommand.php" />
+      <jump line="22" column="163" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Cookie/VisitorCookie.php" />
+      <jump line="37" column="66" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Session/VisitorSession.php" />
+      <jump line="24" column="38" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Cookie/VisitorCookie.php" />
+      <jump line="25" column="47" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Cookie/VisitorCookie.php" />
+      <jump line="27" column="0" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Cookie/VisitorCookie.php" />
+      <jump line="28" column="4" filename="$USER_HOME$/Projects/analytics/src/Exomobile/Analytics/Visitor/Cookie/VisitorCookie.php" />
+      <jump line="16" column="8" filename="$USER_HOME$/Projects/exomobile-reports-bundle/src/Exomobile/ReportsBundle/Report/Measure/CalculatedMeasuresList.php" />
+      <jump line="113" column="0" filename="$USER_HOME$/Projects/exomobile-reports-bundle/src/Exomobile/ReportsBundle/Report/ReportBuilder.php" />
+      <jump line="20" column="0" filename="$USER_HOME$/Projects/exomobile-reports-bundle/src/Exomobile/ReportsBundle/Report/CalculatedMeasure.php" />
+      <jump line="16" column="4" filename="$USER_HOME$/Projects/exomobile-reports-bundle/src/Exomobile/ReportsBundle/Report/CalculatedMeasure.php" />
+      <jump line="22" column="62" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Controller/AdminReportController.php" />
+      <jump line="51" column="8" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Controller/AdminReportController.php" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Resources/config/routing.yml" />
+      <jump line="0" column="0" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Resources/views/layout.html.twig" />
+      <jump line="19" column="150" filename="$USER_HOME$/Projects/management.mobiletubes.com/src/Exomobile/AdminReportsBundle/Resources/views/layout.html.twig" />
+    </jumps>
+    <registers>
+      <register name="3" type="4">
+        <text>error</text>
+      </register>
+      <register name="&quot;" type="2">
+        <text encoding="base64">c2FmZGdnZwo=</text>
+      </register>
+      <register name="2" type="4">
+        <text>Error</text>
+      </register>
+      <register name="1" type="2">
+        <text encoding="base64">c2FmZGdnZwo=</text>
+      </register>
+      <register name="0" type="2">
+        <text encoding="base64">ICAgICAgICAgICAgICAgICAgICA8bGkgeyUgaWYgdGFiID09ICdieV9lcnJvcicgJX0gY2xhc3M9ImFjdGl2ZSJ7JSBlbmRpZiAlfT48YSBocmVmPSIvcmVwb3J0L2J5X2Vycm9yP3t7IGFwcC5yZXF1ZXN0LnNlcnZlci5nZXQoJ1FVRVJZX1NUUklORycpIH19Ij5CeSBFcnJvcjwvYT48L2xpPgo=</text>
+      </register>
+      <register name="7" type="4">
+        <text>error</text>
+      </register>
+      <register name="6" type="4">
+        <text>Error</text>
+      </register>
+      <register name="5" type="4">
+        <text>Error</text>
+      </register>
+      <register name="4" type="4">
+        <text>error</text>
+      </register>
+      <register name=":" type="4">
+        <text>q</text>
+      </register>
+      <register name="9" type="2">
+        <text encoding="base64">CnslIGJsb2NrIGNoYXJ0cyAlfQogICAgPGRpdiBpZD0icmV2ZW51ZV9zaGFyZXNfY2hhcnQiIGNsYXNzPSdyZXBvcnQtY2hhcnQnPjwvZGl2Pgp7JSAgZW5kYmxvY2sgJX0KeyVibG9jayBleHRyYV9zY3JpcHRzICV9CiAgICB7eyBwYXJlbnQoKSB9fQogICAgeyUgamF2YXNjcmlwdHMKICAgICdARXhvbW9iaWxlUmVwb3J0c0J1bmRsZS9SZXNvdXJjZXMvcHVibGljL2pzL3JlcG9ydHMvY2hhcnRzL2J5X2RldmljZS9yZXZlbnVlX3NoYXJlc19jaGFydC5qcycKICAgICV9CiAgICA8c2NyaXB0IHR5cGU9InRleHQvamF2YXNjcmlwdCIgc3JjPSJ7eyBhc3NldF91cmwgfX0iPjwvc2NyaXB0PgogICAgeyUgZW5kamF2YXNjcmlwdHMgJX0KICAgIDxzY3JpcHQgdHlwZT0idGV4dC9qYXZhc2NyaXB0Ij4KICAgICAgICAkKGZ1bmN0aW9uKCl7CiAgICAgICAgICAgIHJldmVudWVfc2hhcmVzX2NoYXJ0KCdyZXZlbnVlX3NoYXJlc19jaGFydCcpOwogICAgICAgIH0pOwogICAgPC9zY3JpcHQ+CnslIGVuZGJsb2NrICV9Cg==</text>
+      </register>
+      <register name="8" type="4">
+        <text>error</text>
+      </register>
+      <register name="/" type="4">
+        <text>hello</text>
+      </register>
+      <register name="-" type="4">
+        <text>Error</text>
+      </register>
+    </registers>
+    <search>
+      <last-search>hello</last-search>
+      <last-offset />
+      <last-pattern>hello</last-pattern>
+      <last-dir>1</last-dir>
+      <show-last>true</show-last>
+    </search>
+    <history>
+      <history-search>
+        <entry>setCookie</entry>
+        <entry>set</entry>
+        <entry>setCooki</entry>
+        <entry>assetic</entry>
+        <entry>public</entry>
+        <entry>hello</entry>
+      </history-search>
+      <history-cmd>
+        <entry>t.</entry>
+        <entry encoding="base64">JzwsJz4=</entry>
+        <entry>pu_</entry>
+        <entry>s</entry>
+        <entry>put!</entry>
+        <entry>w</entry>
+        <entry>only</entry>
+        <entry>tabnext</entry>
+        <entry>help</entry>
+        <entry>q</entry>
+      </history-cmd>
+      <history-expr />
+      <history-input />
+    </history>
+  </component>
+</application>
+
