@@ -86,36 +86,36 @@
     <option name="RECENT_FIND_STRINGS">
       <value>
         <list size="30">
-          <item index="0" class="java.lang.String" itemvalue="signup" />
-          <item index="1" class="java.lang.String" itemvalue="error" />
-          <item index="2" class="java.lang.String" itemvalue="country" />
-          <item index="3" class="java.lang.String" itemvalue="handlesignupG" />
-          <item index="4" class="java.lang.String" itemvalue="getIdentifyServiceData" />
-          <item index="5" class="java.lang.String" itemvalue="'it'" />
-          <item index="6" class="java.lang.String" itemvalue="&quot;it&quot;" />
-          <item index="7" class="java.lang.String" itemvalue="append_site_id" />
-          <item index="8" class="java.lang.String" itemvalue="err" />
-          <item index="9" class="java.lang.String" itemvalue="payment_model" />
-          <item index="10" class="java.lang.String" itemvalue="payment" />
-          <item index="11" class="java.lang.String" itemvalue="CommerceGate" />
-          <item index="12" class="java.lang.String" itemvalue="CALLBACK | CAPTURE" />
-          <item index="13" class="java.lang.String" itemvalue="getMemberIdByUid" />
-          <item index="14" class="java.lang.String" itemvalue="getCallbackDataByTransactionId" />
-          <item index="15" class="java.lang.String" itemvalue="proce" />
-          <item index="16" class="java.lang.String" itemvalue="AUTHORIZE START BEGIN" />
-          <item index="17" class="java.lang.String" itemvalue="getCustomerIdFromResult" />
-          <item index="18" class="java.lang.String" itemvalue="&quot;ru" />
-          <item index="19" class="java.lang.String" itemvalue="registerTra" />
-          <item index="20" class="java.lang.String" itemvalue="android" />
-          <item index="21" class="java.lang.String" itemvalue="$this-&gt;videoList" />
-          <item index="22" class="java.lang.String" itemvalue="UpsellThumb" />
-          <item index="23" class="java.lang.String" itemvalue=" $response-&gt;videoList" />
-          <item index="24" class="java.lang.String" itemvalue="upsell" />
-          <item index="25" class="java.lang.String" itemvalue="UpsellT" />
-          <item index="26" class="java.lang.String" itemvalue="'oneshot'" />
-          <item index="27" class="java.lang.String" itemvalue="registerT" />
-          <item index="28" class="java.lang.String" itemvalue="this-&gt;guess" />
-          <item index="29" class="java.lang.String" itemvalue="pub" />
+          <item index="0" class="java.lang.String" itemvalue="error" />
+          <item index="1" class="java.lang.String" itemvalue="country" />
+          <item index="2" class="java.lang.String" itemvalue="handlesignupG" />
+          <item index="3" class="java.lang.String" itemvalue="getIdentifyServiceData" />
+          <item index="4" class="java.lang.String" itemvalue="'it'" />
+          <item index="5" class="java.lang.String" itemvalue="&quot;it&quot;" />
+          <item index="6" class="java.lang.String" itemvalue="append_site_id" />
+          <item index="7" class="java.lang.String" itemvalue="err" />
+          <item index="8" class="java.lang.String" itemvalue="payment_model" />
+          <item index="9" class="java.lang.String" itemvalue="payment" />
+          <item index="10" class="java.lang.String" itemvalue="CommerceGate" />
+          <item index="11" class="java.lang.String" itemvalue="CALLBACK | CAPTURE" />
+          <item index="12" class="java.lang.String" itemvalue="getMemberIdByUid" />
+          <item index="13" class="java.lang.String" itemvalue="getCallbackDataByTransactionId" />
+          <item index="14" class="java.lang.String" itemvalue="proce" />
+          <item index="15" class="java.lang.String" itemvalue="AUTHORIZE START BEGIN" />
+          <item index="16" class="java.lang.String" itemvalue="getCustomerIdFromResult" />
+          <item index="17" class="java.lang.String" itemvalue="&quot;ru" />
+          <item index="18" class="java.lang.String" itemvalue="registerTra" />
+          <item index="19" class="java.lang.String" itemvalue="android" />
+          <item index="20" class="java.lang.String" itemvalue="$this-&gt;videoList" />
+          <item index="21" class="java.lang.String" itemvalue="UpsellThumb" />
+          <item index="22" class="java.lang.String" itemvalue=" $response-&gt;videoList" />
+          <item index="23" class="java.lang.String" itemvalue="upsell" />
+          <item index="24" class="java.lang.String" itemvalue="UpsellT" />
+          <item index="25" class="java.lang.String" itemvalue="'oneshot'" />
+          <item index="26" class="java.lang.String" itemvalue="registerT" />
+          <item index="27" class="java.lang.String" itemvalue="this-&gt;guess" />
+          <item index="28" class="java.lang.String" itemvalue="pub" />
+          <item index="29" class="java.lang.String" itemvalue="j" />
         </list>
       </value>
     </option>
@@ -220,12 +220,12 @@
   <component name="RecentDirectoryProjectsManager">
     <option name="recentPaths">
       <list>
-        <option value="$USER_HOME$/Projects/management.mobiletubes.com" />
-        <option value="$USER_HOME$/Projects/exomobile-reports-bundle" />
-        <option value="$USER_HOME$/Projects/admin.mobiletubes.com" />
-        <option value="$USER_HOME$/Projects/mt-billing-gateway" />
-        <option value="$USER_HOME$/Projects/analytics" />
         <option value="$USER_HOME$/Projects/exo-mobiletubes" />
+        <option value="$USER_HOME$/Projects/mt-billing-gateway" />
+        <option value="$USER_HOME$/Projects/exomobile-reports-bundle" />
+        <option value="$USER_HOME$/Projects/management.mobiletubes.com" />
+        <option value="$USER_HOME$/Projects/admin.mobiletubes.com" />
+        <option value="$USER_HOME$/Projects/analytics" />
         <option value="$USER_HOME$/Projects/management.mobiletubes.com/vendor/exomobile/pdf-bundle" />
         <option value="$USER_HOME$/Projects/mt-components-common" />
         <option value="$USER_HOME$/Projects/prophecy" />
@@ -261,13 +261,12 @@
         <entry key="$USER_HOME$/Projects/admin.mobiletubes.com/vendor/kagux/symfony2-silex-integration-bundle/Kagux/SilexIntegrationBundle" value="" />
         <entry key="$USER_HOME$/Projects/analytics" value="" />
         <entry key="$USER_HOME$/Projects/exo-mobile-ssh" value="" />
-        <entry key="$USER_HOME$/Projects/exo-mobiletubes" value="" />
         <entry key="$USER_HOME$/Projects/exomobile-country-bundle" value="" />
         <entry key="$USER_HOME$/Projects/exomobile-mongo-bundle" value="" />
         <entry key="$USER_HOME$/Projects/exomobile-reports-bundle" value="" />
+        <entry key="$USER_HOME$/Projects/management.mobiletubes.com" value="" />
         <entry key="$USER_HOME$/Projects/management.mobiletubes.com/vendor/exomobile/pdf-bundle" value="" />
         <entry key="$USER_HOME$/Projects/momentphp" value="" />
-        <entry key="$USER_HOME$/Projects/mt-billing-gateway" value="" />
         <entry key="$USER_HOME$/Projects/mt-components-common" value="" />
         <entry key="$USER_HOME$/Projects/php_async" value="" />
         <entry key="$USER_HOME$/Projects/phpspec2" value="" />
@@ -277,7 +276,7 @@
         <entry key="$USER_HOME$/Projects/www.mobiletubes.com" value="" />
       </map>
     </option>
-    <option name="lastPath" value="$USER_HOME$/Projects/management.mobiletubes.com" />
+    <option name="lastPath" value="$USER_HOME$/Projects/exo-mobiletubes" />
   </component>
   <component name="Registry">
     <entry key="ide.firstStartup" value="false" />
@@ -328,7 +327,7 @@
       </value>
     </option>
     <option name="CHECK_NEEDED" value="true" />
-    <option name="LAST_TIME_CHECKED" value="1382694529011" />
+    <option name="LAST_TIME_CHECKED" value="1383040132061" />
     <option name="LAST_BUILD_CHECKED" value="PS-131.374" />
     <option name="UPDATE_CHANNEL_TYPE" value="eap" />
   </component>
@@ -389,15 +388,15 @@
     </recent_templates>
   </component>
   <component name="com.intellij.javaee.ExternalResourceManagerImpl">
-    <ignored-resource url="http://relaxng.org/ns/compatibility/annotations/1.0" />
     <ignored-resource url="urn:idea:xslt-plugin#extensions" />
-    <ignored-resource url="http://www.w3.org/1998/Math/MathML" />
+    <ignored-resource url="http://relaxng.org/ns/compatibility/annotations/1.0" />
     <ignored-resource url="http://exslt.org/dates-and-times" />
+    <ignored-resource url="http://www.w3.org/1998/Math/MathML" />
     <ignored-resource url="http://exslt.org/math" />
     <ignored-resource url="http://exslt.org/dynamic" />
     <ignored-resource url="http://exslt.org/common" />
-    <ignored-resource url="http://exslt.org/sets" />
     <ignored-resource url="http://exslt.org/strings" />
+    <ignored-resource url="http://exslt.org/sets" />
     <ignored-resource url="http://www.w3.org/2000/svg" />
     <default-html-doctype>http://www.w3.org/1999/xhtml</default-html-doctype>
   </component>

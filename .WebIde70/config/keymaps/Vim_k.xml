@@ -22,9 +22,17 @@
   <action id="CheckinProject" />
   <action id="CloseContent">
     <keyboard-shortcut first-keystroke="control F4" />
-    <keyboard-shortcut first-keystroke="shift COMMA" second-keystroke="shift T" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="shift T" />
+  </action>
+  <action id="CompareDirs" />
+  <action id="CompareJars" />
+  <action id="CompareTwoFiles" />
+  <action id="Console.TableResult.NavigateForeignAction">
+    <mouse-shortcut keystroke="control button1" />
   </action>
   <action id="Console.TableResult.Reload" />
+  <action id="DatabaseView.CopyAction" />
+  <action id="DatabaseView.ShowDiff" />
   <action id="Diff.FocusOppositePane">
     <keyboard-shortcut first-keystroke="control W" second-keystroke="W" />
   </action>
@@ -34,6 +42,7 @@
   <action id="Diff.PrevChange">
     <keyboard-shortcut first-keystroke="alt LEFT" />
   </action>
+  <action id="Diff.UpdatedFiles" />
   <action id="EditorCodeBlockEnd" />
   <action id="EditorCopy">
     <keyboard-shortcut first-keystroke="control INSERT" />
@@ -42,6 +51,7 @@
     <keyboard-shortcut first-keystroke="DOWN" />
     <keyboard-shortcut first-keystroke="control J" />
   </action>
+  <action id="EditorDuplicate" />
   <action id="EditorEscape">
     <keyboard-shortcut first-keystroke="ESCAPE" />
     <keyboard-shortcut first-keystroke="control C" />
@@ -64,6 +74,9 @@
     <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="M" />
   </action>
   <action id="FileChooser.TogglePathShowing" />
+  <action id="Find">
+    <keyboard-shortcut first-keystroke="alt F3" />
+  </action>
   <action id="FindNext">
     <keyboard-shortcut first-keystroke="F3" />
   </action>
@@ -85,7 +98,6 @@
     <keyboard-shortcut first-keystroke="control SEMICOLON" />
   </action>
   <action id="GotoDeclaration">
-    <keyboard-shortcut first-keystroke="control B" />
     <mouse-shortcut keystroke="control button1" />
     <keyboard-shortcut first-keystroke="control CLOSE_BRACKET" />
   </action>
@@ -95,6 +107,7 @@
   </action>
   <action id="GotoLine" />
   <action id="GotoRow" />
+  <action id="GotoSuperMethod" />
   <action id="Inline">
     <keyboard-shortcut first-keystroke="control alt N" />
     <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="N" />
@@ -112,6 +125,10 @@
   <action id="QuickDocCopy">
     <keyboard-shortcut first-keystroke="control INSERT" />
   </action>
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="shift F6" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="R" />
+  </action>
   <action id="Replace" />
   <action id="SplitHorizontally">
     <keyboard-shortcut first-keystroke="control W" second-keystroke="H" />
@@ -119,19 +136,49 @@
   <action id="SplitVertically">
     <keyboard-shortcut first-keystroke="control W" second-keystroke="V" />
   </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="shift alt ENTER" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="shift alt DOWN" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="shift alt LEFT" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="shift alt RIGHT" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="shift alt UP" />
+  </action>
   <action id="TabList">
     <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="T" />
   </action>
   <action id="TypeHierarchy" />
+  <action id="Unsplit">
+    <keyboard-shortcut first-keystroke="control W" second-keystroke="U" />
+  </action>
   <action id="UnsplitAll">
     <keyboard-shortcut first-keystroke="control W" second-keystroke="U" />
   </action>
   <action id="Vcs.UpdateProject" />
+  <action id="VimEditorPageDown">
+    <keyboard-shortcut first-keystroke="control B" />
+  </action>
+  <action id="VimEditorPageUp">
+    <keyboard-shortcut first-keystroke="control F" />
+  </action>
   <action id="VimMotionNextTab">
     <keyboard-shortcut first-keystroke="control T" />
   </action>
   <action id="VimMotionPreviousTab">
     <keyboard-shortcut first-keystroke="control G" />
+  </action>
+  <action id="VimMotionScrollHalfPageDown">
+    <keyboard-shortcut first-keystroke="control U" />
+  </action>
+  <action id="VimMotionScrollHalfPageUp">
+    <keyboard-shortcut first-keystroke="control D" />
   </action>
   <action id="VimRedo">
     <keyboard-shortcut first-keystroke="control R" />
