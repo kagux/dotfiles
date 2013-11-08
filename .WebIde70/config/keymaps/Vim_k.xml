@@ -8,7 +8,6 @@
     <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="F" />
   </action>
   <action id="ActivateTerminalToolWindow">
-    <keyboard-shortcut first-keystroke="alt MINUS" />
     <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="G" />
   </action>
   <action id="Back">
