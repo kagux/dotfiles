@@ -1,2 +1,2 @@
-#!bin/sh
+#!/bin/bash
 vim +BundleInstall +qall
