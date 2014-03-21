@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<keymap version="1" name="Vim_k" parent="$default">
+  <action id="$Copy">
+    <keyboard-shortcut first-keystroke="control INSERT" />
+  </action>
+  <action id="ActivateProjectToolWindow">
+    <keyboard-shortcut first-keystroke="alt 1" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="F" />
+  </action>
+  <action id="ActivateTerminalToolWindow">
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="G" />
+  </action>
+  <action id="Back">
+    <keyboard-shortcut first-keystroke="control alt LEFT" />
+    <mouse-shortcut keystroke="button4" />
+    <keyboard-shortcut first-keystroke="control O" />
+  </action>
+  <action id="ChangesView.Commit">
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="K" />
+  </action>
+  <action id="CheckinProject" />
+  <action id="CloseContent">
+    <keyboard-shortcut first-keystroke="control F4" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="shift T" />
+  </action>
+  <action id="CompareDirs" />
+  <action id="CompareJars" />
+  <action id="CompareTwoFiles" />
+  <action id="Console.TableResult.NavigateForeignAction">
+    <mouse-shortcut keystroke="control button1" />
+  </action>
+  <action id="Console.TableResult.Reload" />
+  <action id="DatabaseView.CopyAction" />
+  <action id="DatabaseView.ShowDiff" />
+  <action id="Diff.FocusOppositePane">
+    <keyboard-shortcut first-keystroke="control W" second-keystroke="W" />
+  </action>
+  <action id="Diff.NextChange">
+    <keyboard-shortcut first-keystroke="alt RIGHT" />
+  </action>
+  <action id="Diff.PrevChange">
+    <keyboard-shortcut first-keystroke="alt LEFT" />
+  </action>
+  <action id="Diff.UpdatedFiles" />
+  <action id="EditorCodeBlockEnd" />
+  <action id="EditorCopy">
+    <keyboard-shortcut first-keystroke="control INSERT" />
+  </action>
+  <action id="EditorDown">
+    <keyboard-shortcut first-keystroke="DOWN" />
+    <keyboard-shortcut first-keystroke="control J" />
+  </action>
+  <action id="EditorDuplicate" />
+  <action id="EditorEscape">
+    <keyboard-shortcut first-keystroke="ESCAPE" />
+    <keyboard-shortcut first-keystroke="control C" />
+  </action>
+  <action id="EditorLeft">
+    <keyboard-shortcut first-keystroke="LEFT" />
+    <keyboard-shortcut first-keystroke="control H" />
+  </action>
+  <action id="EditorRight">
+    <keyboard-shortcut first-keystroke="RIGHT" />
+    <keyboard-shortcut first-keystroke="control L" />
+  </action>
+  <action id="EditorSelectWord" />
+  <action id="EditorUp">
+    <keyboard-shortcut first-keystroke="UP" />
+    <keyboard-shortcut first-keystroke="control K" />
+  </action>
+  <action id="ExtractMethod">
+    <keyboard-shortcut first-keystroke="control alt M" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="M" />
+  </action>
+  <action id="FileChooser.TogglePathShowing" />
+  <action id="Find">
+    <keyboard-shortcut first-keystroke="alt F3" />
+  </action>
+  <action id="FindNext">
+    <keyboard-shortcut first-keystroke="F3" />
+  </action>
+  <action id="Generate">
+    <keyboard-shortcut first-keystroke="alt INSERT" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="I" />
+  </action>
+  <action id="Git.Branches">
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="B" />
+  </action>
+  <action id="Git.Pull">
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="P" />
+  </action>
+  <action id="Git.Push">
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="shift P" />
+  </action>
+  <action id="GotoClass">
+    <keyboard-shortcut first-keystroke="control N" />
+    <keyboard-shortcut first-keystroke="control SEMICOLON" />
+  </action>
+  <action id="GotoDeclaration">
+    <mouse-shortcut keystroke="control button1" />
+    <keyboard-shortcut first-keystroke="control CLOSE_BRACKET" />
+  </action>
+  <action id="GotoFile">
+    <keyboard-shortcut first-keystroke="shift control N" />
+    <keyboard-shortcut first-keystroke="control P" />
+  </action>
+  <action id="GotoLine" />
+  <action id="GotoRow" />
+  <action id="GotoSuperMethod" />
+  <action id="Inline">
+    <keyboard-shortcut first-keystroke="control alt N" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="N" />
+  </action>
+  <action id="InsertLiveTemplate" />
+  <action id="IntroduceConstant">
+    <keyboard-shortcut first-keystroke="control alt C" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="C" />
+  </action>
+  <action id="IntroduceVariable">
+    <keyboard-shortcut first-keystroke="control alt V" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="V" />
+  </action>
+  <action id="NextSplitter">
+    <keyboard-shortcut first-keystroke="control W" second-keystroke="W" />
+  </action>
+  <action id="OverrideMethods" />
+  <action id="ParameterInfo" />
+  <action id="PhpListenDebugAction">
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="D" />
+  </action>
+  <action id="ProfilerJumpToSource">
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="S" />
+  </action>
+  <action id="QuickDocCopy">
+    <keyboard-shortcut first-keystroke="control INSERT" />
+  </action>
+  <action id="RenameElement">
+    <keyboard-shortcut first-keystroke="shift F6" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="R" />
+  </action>
+  <action id="Replace" />
+  <action id="Run">
+    <keyboard-shortcut first-keystroke="shift F10" />
+    <keyboard-shortcut first-keystroke="control COMMA" second-keystroke="T" />
+  </action>
+  <action id="SplitHorizontally">
+    <keyboard-shortcut first-keystroke="control W" second-keystroke="H" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="control W" second-keystroke="V" />
+  </action>
+  <action id="SwitchApply">
+    <keyboard-shortcut first-keystroke="shift alt ENTER" />
+  </action>
+  <action id="SwitchDown">
+    <keyboard-shortcut first-keystroke="shift alt DOWN" />
+  </action>
+  <action id="SwitchLeft">
+    <keyboard-shortcut first-keystroke="shift alt LEFT" />
+  </action>
+  <action id="SwitchRight">
+    <keyboard-shortcut first-keystroke="shift alt RIGHT" />
+  </action>
+  <action id="SwitchUp">
+    <keyboard-shortcut first-keystroke="shift alt UP" />
+  </action>
+  <action id="TypeHierarchy" />
+  <action id="Unsplit">
+    <keyboard-shortcut first-keystroke="control W" second-keystroke="U" />
+  </action>
+  <action id="UnsplitAll">
+    <keyboard-shortcut first-keystroke="control W" second-keystroke="U" />
+  </action>
+  <action id="Vcs.UpdateProject" />
+  <action id="VimEditorPageDown">
+    <keyboard-shortcut first-keystroke="control B" />
+  </action>
+  <action id="VimEditorPageUp">
+    <keyboard-shortcut first-keystroke="control F" />
+  </action>
+  <action id="VimMotionNextTab">
+    <keyboard-shortcut first-keystroke="control T" />
+  </action>
+  <action id="VimMotionPreviousTab">
+    <keyboard-shortcut first-keystroke="control G" />
+  </action>
+  <action id="VimMotionScrollHalfPageDown">
+    <keyboard-shortcut first-keystroke="control U" />
+  </action>
+  <action id="VimMotionScrollHalfPageUp">
+    <keyboard-shortcut first-keystroke="control D" />
+  </action>
+  <action id="VimRedo">
+    <keyboard-shortcut first-keystroke="control R" />
+  </action>
+</keymap>
+
