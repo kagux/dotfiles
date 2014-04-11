@@ -1,0 +1,37 @@
+# ~/.tmuxinator/presto-ruby.yml
+
+name: presto-ruby
+root: ~/
+
+windows:
+  - prestofly:
+      layout: tiled
+      panes:
+        - project-root:
+            - cd ~/Projects/prestofly
+            - clear
+        - project-root:
+            - cd ~/Projects/prestofly
+            - clear
+        - project-root:
+            - cd ~/Projects/prestofly
+            - clear
+        - project-root:
+            - cd ~/Projects/prestofly
+            - clear
+
+  - vagrant:
+      layout: tiled
+      panes:
+        - cd ~/Projects/prestofly
+        - cd ~/Projects/prestofly
+
+  - servers:
+      layout: tiled
+      panes:
+        - foodnex-health:
+            - ssh foodnex.ru
+            - htop
+        - foodnex:
+            - ssh foodnex.ru
+            - clear
