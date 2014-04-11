@@ -22,6 +22,9 @@ windows:
         - billing:
             - cd ~/Projects/mt-billing-gateway/
             - clear
+        - corporate:
+            - cd ~/Projects/www.mobilecashout.com/
+            - clear
 
   - logs:
       layout: tiled
@@ -32,11 +35,11 @@ windows:
         - w02-php:
           - ssh -A w02.evo.mobiletubes.com
           - tailf /var/log/php-fpm/www-error.log
-        - w01-frontend:
+        - w01-wildcard:
           - ssh -A w01.evo.mobiletubes.com
           - cd /var/www/data/wildcard/log
           - clear
-        - w02-frontend:
+        - w02-wildcard:
           - ssh -A w02.evo.mobiletubes.com
           - cd /var/www/data/wildcard/log
           - clear
@@ -47,6 +50,15 @@ windows:
         - w02-billing:
           - ssh -A w02.evo.mobiletubes.com
           - cd /var/www/data/billing-gateway/log
+        - w01-frontend:
+          - ssh -A w01.evo.mobiletubes.com
+          - cd /var/www/data/frontend/log/
+          - tailf prod.log
+          - clear
+        - w02-frontend:
+          - ssh -A w02.evo.mobiletubes.com
+          - cd /var/www/data/frontend/log/
+          - tailf prod.log
           - clear
 
   - servers-prod:
@@ -74,7 +86,10 @@ windows:
   - servers-stage:
       layout: tiled
       panes:
-        - w00:
+        - w00-1:
+          - ssh -A w00.evo.mobiletubes.com
+          - clear
+        - w00-2:
           - ssh -A w00.evo.mobiletubes.com
           - clear
         - d00:
