@@ -11,26 +11,17 @@ Bundle 'gmarik/vundle'
 " My Bundles here:
 "
 " original repos on github
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'tpope/vim-surround'
 Bundle 'Lokaltog/powerline'
-Bundle 'StanAngeloff/php.vim'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
-Bundle 'shawncplus/phpcomplete.vim'
-Bundle 'majutsushi/tagbar'
-Bundle 'kagux/AutoComplPop'
-Bundle 'vim-php/tagbar-phpctags.vim'
-Bundle 'techlivezheng/vim-plugin-tagbar-phpctags'
-Bundle 'arnaud-lb/vim-php-namespace'
-Bundle 'noahfrederick/vim-php-refactor'
-Bundle 'austintaylor/vim-commaobject'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'scrooloose/syntastic'
+Bundle 'AndrewRadev/vim-eco.git'
+Bundle 'kchmck/vim-coffee-script.git'
 
 let mapleader=","
 
@@ -107,10 +98,6 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" php add use statements
-inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
-
 " ctrlp mapping
 
 let g:ctrlp_map = '<c-p>'
@@ -149,12 +136,3 @@ else
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 endif
-
-"------------------------------------------------------
-" AutoComplPop
-"------------------------------------------------------
-let g:acp_ignorecaseOption = 0
-let g:rubycomplete_buffer_loading = 1
-let g:rubycomplete_classes_in_global = 1
-let g:rubycomplete_rails = 1
-"let g:rubycomplete_load_gemfile = 1

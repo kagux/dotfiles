@@ -1,0 +1,19 @@
+# ~/.tmuxinator/vagrant-ide.yml
+
+name: vagrant-ide
+root: /vagrant
+
+windows:
+  - rails:
+      layout: tiled
+      panes:
+        - rails console
+        - tail -f /vagrant/log/development.log
+        - guard:
+          - guard start
+        - server:
+          - rails server
+  - editor:
+      layout: tiled
+      panes:
+        - rails console
