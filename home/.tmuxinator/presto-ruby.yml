@@ -30,8 +30,8 @@ windows:
       layout: tiled
       panes:
         - foodnex-health:
-            - ssh foodnex.ru
+            - ssh fly-f01.internal.foodnex.ru
             - htop
         - foodnex:
-            - ssh foodnex.ru
+            - ssh fly-f01.internal.foodnex.ru
             - clear

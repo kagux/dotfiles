@@ -34,8 +34,12 @@ set nu
 
 " color theme
 syntax enable
+if !has("gui_running")
+  let g:gruvbox_italic=0
+endif
 set t_Co=256
 set background=dark    " Setting dark mode "
+colorscheme gruvbox
 
 
 filetype plugin indent on 
