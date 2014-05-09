@@ -4,16 +4,18 @@ name: vagrant-ide
 root: /vagrant
 
 windows:
+  - editor:
+      layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
+      panes:
+        - vim
+        - terminal:
+            clear
   - rails:
       layout: tiled
       panes:
-        - rails console
+        - console
         - tail -f /vagrant/log/development.log
         - guard:
           - guard start
         - server:
           - rails server
-  - editor:
-      layout: tiled
-      panes:
-        - rails console

@@ -13,27 +13,37 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'tpope/vim-surround'
-Bundle 'Lokaltog/powerline'
 Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'thoughtbot/vim-rspec'
-Bundle 'scrooloose/syntastic'
 Bundle 'AndrewRadev/vim-eco.git'
 Bundle 'kchmck/vim-coffee-script.git'
+Bundle 'Valloric/YouCompleteMe.git'
+Bundle 'vim-scripts/vim-auto-save.git'
+Bundle 'docunext/closetag.vim.git'
+Bundle 'cakebaker/scss-syntax.vim'
+Bundle 'morhetz/gruvbox.git'
+Bundle 'jpo/vim-railscasts-theme.git'
 
 let mapleader=","
 
 " show line numbers
 set nu
-" solarized theme
+
+" color theme
 syntax enable
 set t_Co=256
-set background=dark
-colorscheme solarized
+set background=dark    " Setting dark mode "
+
 
 filetype plugin indent on 
+
+" autocomplete
+
+autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType eco set omnifunc=htmlcomplete#CompleteTags
 
 " Backups and swap
 set nobackup
@@ -98,10 +108,18 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
 
-" ctrlp mapping
+" ctrlp config
 
 let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP .'
+" Set no max file limit
+let g:ctrlp_max_files = 0
+let g:ctrlp_custom_ignore = {
+            \ 'dir': '\.git$\|cache$\|\.svn$|cookbooks|tmp|vendor',
+            \ 'file': '\.exe$\|\.so$\|\.dll$' }
+
+" enable autosaving of buffer changes
+let g:auto_save = 1
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key mapping for window navigation
 " "
