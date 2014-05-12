@@ -18,6 +18,9 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'thoughtbot/vim-rspec'
+Bundle 'benmills/vimux'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
 Bundle 'AndrewRadev/vim-eco.git'
 Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'Valloric/YouCompleteMe.git'
@@ -26,11 +29,18 @@ Bundle 'docunext/closetag.vim.git'
 Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'morhetz/gruvbox.git'
 Bundle 'jpo/vim-railscasts-theme.git'
+Bundle 'ecomba/vim-ruby-refactoring.git'
+Bundle 'tmhedberg/matchit.git'
+Bundle 'tpope/vim-endwise.git'
 
 let mapleader=","
+nnoremap <leader><leader> <c-^> " switch between current and prev buffers
 
 " show line numbers
 set nu
+
+" backspace config
+:set backspace=indent,eol,start
 
 " color theme
 syntax enable
@@ -94,7 +104,7 @@ set showcmd
 " option 
 set completeopt=preview,menuone
 " select using enter
-inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-j>"))
 inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-k>"))
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -106,11 +116,19 @@ map <leader>p "+p
 " toggle nerdtree
 map <leader>f :NERDTreeToggle<CR>
 
+" vimux config
+
+let g:VimuxUseNearest = 0 "don't use nearest window for output
+let g:VimuxOrientation = 'h'
+let g:VimuxHeight = "30"
+
 " rspec
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+
+let g:rspec_command = 'call VimuxRunCommand("spring rspec {spec}\n", 0)'
 
 " ctrlp config
 
