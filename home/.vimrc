@@ -13,25 +13,37 @@ Bundle 'gmarik/vundle'
 " original repos on github
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'tpope/vim-surround'
-Bundle 'altercation/vim-colors-solarized.git'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'thoughtbot/vim-rspec'
 Bundle 'benmills/vimux'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'AndrewRadev/vim-eco.git'
-Bundle 'kchmck/vim-coffee-script.git'
 Bundle 'Valloric/YouCompleteMe.git'
 Bundle 'vim-scripts/vim-auto-save.git'
 Bundle 'docunext/closetag.vim.git'
-Bundle 'cakebaker/scss-syntax.vim'
-Bundle 'morhetz/gruvbox.git'
-Bundle 'jpo/vim-railscasts-theme.git'
-Bundle 'ecomba/vim-ruby-refactoring.git'
 Bundle 'tmhedberg/matchit.git'
+Bundle 'joonty/vdebug.git'
+
+"themes
+Bundle 'jpo/vim-railscasts-theme.git'
+Bundle 'morhetz/gruvbox.git'
+
+"sass
+Bundle 'cakebaker/scss-syntax.vim'
+
+"coffescript
+Bundle 'AndrewRadev/vim-eco.git'
+Bundle 'kchmck/vim-coffee-script.git'
+
+"ruby
+Bundle 'vim-ruby/vim-ruby'
+Bundle 'thoughtbot/vim-rspec'
+Bundle 'ecomba/vim-ruby-refactoring.git'
 Bundle 'tpope/vim-endwise.git'
+Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-bundler'
+
+"php
+Bundle 'arnaud-lb/vim-php-namespace'
+Bundle 'StanAngeloff/php.vim.git'
 
 let mapleader=","
 nnoremap <leader><leader> <c-^> " switch between current and prev buffers
@@ -176,3 +188,11 @@ else
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
 endif
+
+let FILETAG=expand("./tags")
+if filereadable(FILETAG)
+    set tags=tags
+endif
+
+inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
+noremap <Leader>u :call PhpInsertUse()<CR>
