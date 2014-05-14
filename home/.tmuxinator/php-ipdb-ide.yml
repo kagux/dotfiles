@@ -1,0 +1,19 @@
+# ~/.tmuxinator/php-ipdb-ide.yml
+
+name: php-ipdb-ide
+root: ~/Projects/exo-mobiletubes/vendor/exomobile/ip-database
+
+windows:
+  - editor:
+      layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
+      panes:
+        - vim
+        - terminal:
+            clear
+  - php:
+      layout: tiled
+      panes:
+        - clear
+        - clear 
+        - clear
+        - clear
