@@ -33,6 +33,9 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'AndrewRadev/vim-eco.git'
 Bundle 'kchmck/vim-coffee-script.git'
 
+"js
+Bundle 'mustache/vim-mustache-handlebars'
+
 "ruby
 Bundle 'vim-ruby/vim-ruby'
 Bundle 'thoughtbot/vim-rspec'
@@ -44,6 +47,7 @@ Bundle 'tpope/vim-bundler'
 "php
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'StanAngeloff/php.vim.git'
+Bundle 'evidens/vim-twig.git'
 
 let mapleader=","
 nnoremap <leader><leader> <c-^> " switch between current and prev buffers
@@ -54,6 +58,9 @@ set nu
 " backspace config
 :set backspace=indent,eol,start
 
+" make sure that terminal is seen as 256 color
+set term=screen-256color
+
 " color theme
 syntax enable
 if !has("gui_running")
@@ -62,7 +69,6 @@ endif
 set t_Co=256
 set background=dark    " Setting dark mode "
 colorscheme gruvbox
-
 
 filetype plugin indent on 
 
@@ -104,7 +110,6 @@ set wildmode=longest,list
 set wildmenu
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/javascripts/compiled
 set wildignore+=tmp,*.orig,*.jpg,*.png,*.gif,log,solr,.sass-cache,.jhw-cache
-set wildignore+=bundler_stubs,build,error_pages,bundle,build,error_pages
 
 set clipboard+=unnamed  " use the clipboards of vim and win
 set go+=a               " Visual selection automatically copied to the clipboard
@@ -148,7 +153,7 @@ let g:ctrlp_map = '<c-p>'
 " Set no max file limit
 let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = {
-            \ 'dir': '\.git$\|cache$\|\.svn$|cookbooks|tmp|vendor',
+            \ 'dir': '\.git$\|cache$\|\.svn$\|cookbooks\|tmp\|web\/js\|web\/css',
             \ 'file': '\.exe$\|\.so$\|\.dll$' }
 
 " enable autosaving of buffer changes
