@@ -17,10 +17,10 @@ Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
 Bundle 'benmills/vimux'
 Bundle 'Valloric/YouCompleteMe.git'
-Bundle 'vim-scripts/vim-auto-save.git'
 Bundle 'docunext/closetag.vim.git'
 Bundle 'tmhedberg/matchit.git'
 Bundle 'joonty/vdebug.git'
+Bundle 'scrooloose/syntastic.git'
 
 "themes
 Bundle 'jpo/vim-railscasts-theme.git'
@@ -48,6 +48,9 @@ Bundle 'tpope/vim-bundler'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'StanAngeloff/php.vim.git'
 Bundle 'evidens/vim-twig.git'
+
+"git
+Bundle 'tpope/vim-fugitive.git'
 
 let mapleader=","
 nnoremap <leader><leader> <c-^> " switch between current and prev buffers
@@ -201,3 +204,17 @@ endif
 
 inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
 noremap <Leader>u :call PhpInsertUse()<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""" Autosave and syntax check """""""""""""""""""""""""
+set updatetime=200
+autocmd CursorHold,CursorHoldI,InsertLeave * call AutoSave()
+
+function! AutoSave()
+  if &modified
+    silent! wa
+    SyntasticCheck
+    echo "(AutoSaved at " . strftime("%T") . ")"
+  endif
+endfunction
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
