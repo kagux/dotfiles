@@ -21,6 +21,10 @@ Bundle 'docunext/closetag.vim.git'
 Bundle 'tmhedberg/matchit.git'
 Bundle 'joonty/vdebug.git'
 Bundle 'scrooloose/syntastic.git'
+Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-surround'
+Bundle 'godlygeek/tabular'
+Bundle 'bling/vim-airline'
 
 "themes
 Bundle 'jpo/vim-railscasts-theme.git'
@@ -28,6 +32,9 @@ Bundle 'morhetz/gruvbox.git'
 
 "sass
 Bundle 'cakebaker/scss-syntax.vim'
+
+"less
+Bundle 'groenewege/vim-less'
 
 "coffescript
 Bundle 'AndrewRadev/vim-eco.git'
@@ -152,12 +159,18 @@ let g:rspec_command = 'call VimuxRunCommand("spring rspec {spec}\n", 0)'
 
 " ctrlp config
 
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
+if executable('ag')
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+endif
+
 let g:ctrlp_map = '<c-p>'
 " Set no max file limit
 let g:ctrlp_max_files = 0
 let g:ctrlp_custom_ignore = {
-            \ 'dir': '\.git$\|cache$\|\.svn$\|cookbooks\|tmp\|web\/js\|web\/css',
+            \ 'dir': '\.git$\|cache$\|\.svn$\|cookbooks\|tmp\|web\/js\|web\/css\|web\/bundles',
             \ 'file': '\.exe$\|\.so$\|\.dll$' }
+
 
 " enable autosaving of buffer changes
 let g:auto_save = 1
