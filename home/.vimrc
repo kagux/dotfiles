@@ -142,6 +142,7 @@ map <leader>p "+p
 
 " toggle nerdtree
 map <leader>f :NERDTreeToggle<CR>
+let g:NERDTreeWinSize=50
 
 " vimux config
 
