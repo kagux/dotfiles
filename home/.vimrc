@@ -27,7 +27,6 @@ Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
 
 "themes
-Bundle 'jpo/vim-railscasts-theme.git'
 Bundle 'morhetz/gruvbox.git'
 
 "sass
@@ -58,6 +57,9 @@ Bundle 'evidens/vim-twig.git'
 
 "git
 Bundle 'tpope/vim-fugitive.git'
+
+"fast search in files
+Bundle 'rking/ag.vim'
 
 let mapleader=","
 nnoremap <leader><leader> <c-^> " switch between current and prev buffers
@@ -158,12 +160,19 @@ map <Leader>a :call RunAllSpecs()<CR>
 
 let g:rspec_command = 'call VimuxRunCommand("spring rspec {spec}\n", 0)'
 
-" ctrlp config
+" Silversearcher config
+"
+" bind K to grep word under cursor
+nnoremap K :Ag<CR>
+nnoremap \ :Ag<SPACE>
 
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 if executable('ag')
   let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 endif
+
+" ctrlp config
+
+let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 
 let g:ctrlp_map = '<c-p>'
 " Set no max file limit
