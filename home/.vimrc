@@ -54,6 +54,7 @@ Bundle 'tpope/vim-bundler'
 Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'StanAngeloff/php.vim.git'
 Bundle 'evidens/vim-twig.git'
+Bundle '2072/PHP-Indenting-for-VIm'
 
 "git
 Bundle 'tpope/vim-fugitive.git'
@@ -105,11 +106,12 @@ set encoding=utf-8
 " Whitespace stuff
 
 set nowrap
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 set expandtab
 set list listchars=tab:\ \ ,trail:·
+autocmd Filetype php setlocal ts=4 sw=4 expandtab
 
 " Searching
 set hlsearch
