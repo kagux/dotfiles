@@ -52,3 +52,5 @@ export EDITOR='vim'
 source ~/.phpbrew/bashrc
 source ~/.tmux/tmuxinator.zsh
 alias rake='noglob rake'
+eval `gnome-keyring-daemon --start`
+
