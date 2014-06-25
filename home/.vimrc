@@ -16,7 +16,6 @@ Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
 Bundle 'kien/ctrlp.vim'
 Bundle 'benmills/vimux'
-Bundle 'Valloric/YouCompleteMe.git'
 Bundle 'docunext/closetag.vim.git'
 Bundle 'tmhedberg/matchit.git'
 Bundle 'joonty/vdebug.git'
@@ -25,6 +24,8 @@ Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
+Bundle 'kagux/vim-test-runner'
+Bundle 'Shougo/neocomplete.vim'
 
 "themes
 Bundle 'morhetz/gruvbox.git'
@@ -55,6 +56,7 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'StanAngeloff/php.vim.git'
 Bundle 'evidens/vim-twig.git'
 Bundle '2072/PHP-Indenting-for-VIm'
+Bundle 'shawncplus/phpcomplete.vim'
 
 "git
 Bundle 'tpope/vim-fugitive.git'
@@ -85,10 +87,70 @@ colorscheme gruvbox
 
 filetype plugin indent on 
 
-" autocomplete
+"""""""" AUTOCOMPLETE
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType eco set omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType php set omnifunc=phpcomplete#CompletePHP
+
+" autocomplete to longest common mantch and show even if there is only one option 
+set completeopt=preview,menuone,longest
+
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 2
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" Define dictionary.
+let g:neocomplete#sources#dictionary#dictionaries = {
+    \ 'default' : '',
+    \ 'vimshell' : $HOME.'/.vimshell_hist',
+    \ 'scheme' : $HOME.'/.gosh_completions'
+        \ }
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Plugin key-mappings.
+inoremap <expr><C-g>     neocomplete#undo_completion()
+inoremap <expr><C-l>     neocomplete#complete_common_string()
+
+" Recommended key-mappings.
+" <CR>: close popup and save indent.
+inoremap <silent> <CR> <C-r>=<SID>my_cr_function()<CR>
+function! s:my_cr_function()
+  return neocomplete#close_popup() . "\<CR>"
+endfunction
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+" <C-h>, <BS>: close popup and delete backword char.
+inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
+inoremap <expr><C-y>  neocomplete#close_popup()
+inoremap <expr><C-e>  neocomplete#cancel_popup()
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.php = '[^. \t]->\h\w*\|\h\w*::'
+
+"""""""" END AUTOCOMPLETE
+
+" select suggestion using tab and navigate with C-j and C-k
+" inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-j>"))
+inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-k>"))
 
 " Backups and swap
 set nobackup
@@ -119,48 +181,25 @@ set incsearch
 set ignorecase
 set smartcase
 
-" Tab completion
-set wildmode=longest,list
-set wildmenu
-set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*,public/javascripts/compiled
-set wildignore+=tmp,*.orig,*.jpg,*.png,*.gif,log,solr,.sass-cache,.jhw-cache
-
-set clipboard+=unnamed  " use the clipboards of vim and win
-set go+=a               " Visual selection automatically copied to the clipboard
-
 " Show (partial) command in the status line
 set showcmd
 
-" autocomplete to longest common mantch and show even if there is only one
-" option 
-set completeopt=preview,menuone
-" select using enter
-"inoremap <expr> <CR> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-j>"))
-inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-k>"))
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Copy paste system clipboard
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <leader>y "+y
-map <leader>p "+p
-
 " toggle nerdtree
 map <leader>f :NERDTreeToggle<CR>
+map <leader>F :NERDTreeFind<CR>
 let g:NERDTreeWinSize=50
 
 " vimux config
 
-let g:VimuxUseNearest = 0 "don't use nearest window for output
+let g:VimuxUseNearest = 1 "use nearest pane for output
 let g:VimuxOrientation = 'h'
 let g:VimuxHeight = "30"
 
-" rspec
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-let g:rspec_command = 'call VimuxRunCommand("spring rspec {spec}\n", 0)'
+" test-runner
+let g:test_runner_run_command = 'call VimuxRunCommand("{test_command}")'
+let g:test_runner_phpspec_command = 'bin/phpspec run -f dot {tests_path}'
+let g:test_runner_phpunit_command = 'bin/phpunit {tests_path}'
+let g:test_runner_rspec_command = 'spring rspec {tests_path}'
 
 " Silversearcher config
 "
@@ -179,13 +218,7 @@ let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
 let g:ctrlp_map = '<c-p>'
 " Set no max file limit
 let g:ctrlp_max_files = 0
-let g:ctrlp_custom_ignore = {
-            \ 'dir': '\.git$\|cache$\|\.svn$\|cookbooks\|tmp\|web\/js\|web\/css\|web\/bundles',
-            \ 'file': '\.exe$\|\.so$\|\.dll$' }
 
-
-" enable autosaving of buffer changes
-let g:auto_save = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " key mapping for window navigation
@@ -243,3 +276,4 @@ function! AutoSave()
   endif
 endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
