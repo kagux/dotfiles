@@ -26,10 +26,7 @@ Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
 Bundle 'kagux/vim-test-runner'
 Bundle 'Valloric/YouCompleteMe'
-
-"snippets
-" Bundle 'sirver/ultisnips'
-" Bundle 'honza/vim-snippets'
+Bundle 'wesQ3/vim-windowswap'
 
 "tags
 " Bundle 'xolox/vim-easytags'
@@ -53,7 +50,6 @@ Bundle 'mustache/vim-mustache-handlebars'
 
 "ruby
 Bundle 'vim-ruby/vim-ruby'
-Bundle 'thoughtbot/vim-rspec'
 Bundle 'ecomba/vim-ruby-refactoring.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-rails'
@@ -249,26 +245,3 @@ function! ChangePaste(type, ...)
     silent exe "normal! `[v`]\"_c"
     silent exe "normal! p"
 endfunction
-
-
-"Ultrasnips
-" let g:UltiSnipsExpandTrigger       = "<tab>"
-" let g:UltiSnipsJumpForwardTrigger  = "<c-j>"
-" let g:UltiSnipsJumpBackwardTrigger = "<c-k>"
-
-" function! g:UltiSnips_Complete()
-"     call UltiSnips#ExpandSnippet()
-"     if g:ulti_expand_res == 0
-"         if pumvisible()
-"             return "\<C-n>"
-"         else
-"             call UltiSnips#JumpForwards()
-"             if g:ulti_jump_forwards_res == 0
-"                return "\<TAB>"
-"             endif
-"         endif
-"     endif
-"     return ""
-" endfunction
-
-" au InsertEnter * exec "inoremap <silent> " . g:UltiSnipsExpandTrigger . " <C-R>=g:UltiSnips_Complete()<cr>"
