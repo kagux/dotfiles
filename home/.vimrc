@@ -14,6 +14,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
+Bundle 'vim-scripts/YankRing.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'benmills/vimux'
 Bundle 'docunext/closetag.vim.git'
@@ -21,12 +22,14 @@ Bundle 'tmhedberg/matchit.git'
 Bundle 'joonty/vdebug.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
 Bundle 'kagux/vim-test-runner'
 Bundle 'Valloric/YouCompleteMe'
 Bundle 'wesQ3/vim-windowswap'
+
+"local vim configs to use in projects
+Bundle 'embear/vim-localvimrc'
 
 "tags
 " Bundle 'xolox/vim-easytags'
@@ -47,6 +50,7 @@ Bundle 'kchmck/vim-coffee-script.git'
 
 "js
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'jelera/vim-javascript-syntax'
 
 "ruby
 Bundle 'vim-ruby/vim-ruby'
@@ -60,7 +64,7 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'StanAngeloff/php.vim.git'
 Bundle 'evidens/vim-twig.git'
 Bundle '2072/PHP-Indenting-for-VIm'
-Bundle 'shawncplus/phpcomplete.vim'
+" Bundle 'shawncplus/phpcomplete.vim'
 
 "git
 Bundle 'tpope/vim-fugitive.git'
@@ -170,7 +174,7 @@ nnoremap K :Ag<CR>
 nnoremap \ :Ag<SPACE>
 
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --skip-vcs-ignores --nocolor -g ""'
 endif
 
 " ctrlp config
@@ -245,3 +249,13 @@ function! ChangePaste(type, ...)
     silent exe "normal! `[v`]\"_c"
     silent exe "normal! p"
 endfunction
+
+
+
+silent! nunmap CR-]
+
+
+
+"yankring
+let g:yankring_replace_n_pkey = '<C-m>'
+nnoremap <silent> <leader>yr :YRShow<CR> 
