@@ -14,7 +14,6 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree.git'
 Bundle 'tpope/vim-surround'
 Bundle 'Townk/vim-autoclose'
-Bundle 'vim-scripts/YankRing.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'benmills/vimux'
 Bundle 'docunext/closetag.vim.git'
@@ -26,14 +25,12 @@ Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
 Bundle 'kagux/vim-test-runner'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'wesQ3/vim-windowswap'
+
+"visually highlight indents
+Bundle 'nathanaelkane/vim-indent-guides.git'
 
 "local vim configs to use in projects
 Bundle 'embear/vim-localvimrc'
-
-"tags
-" Bundle 'xolox/vim-easytags'
-" Bundle 'xolox/vim-misc'
 
 "themes
 Bundle 'morhetz/gruvbox.git'
@@ -64,10 +61,10 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'StanAngeloff/php.vim.git'
 Bundle 'evidens/vim-twig.git'
 Bundle '2072/PHP-Indenting-for-VIm'
-" Bundle 'shawncplus/phpcomplete.vim'
 
 "git
 Bundle 'tpope/vim-fugitive.git'
+Bundle 'airblade/vim-gitgutter'
 
 "fast search in files
 Bundle 'rking/ag.vim'
