@@ -26,6 +26,15 @@ Bundle 'bling/vim-airline'
 Bundle 'kagux/vim-test-runner'
 Bundle 'Valloric/YouCompleteMe'
 
+"Open URI with your favorite browser
+Bundle 'tyru/open-browser.vim'
+
+"markdown
+Bundle 'tpope/vim-markdown'
+
+"Realtime preview Markdown, reStructuredText, textile
+Bundle 'kannokanno/previm'
+
 "visually highlight indents
 Bundle 'nathanaelkane/vim-indent-guides.git'
 
@@ -256,3 +265,6 @@ silent! nunmap CR-]
 "yankring
 let g:yankring_replace_n_pkey = '<C-m>'
 nnoremap <silent> <leader>yr :YRShow<CR> 
+
+" Realtime preview
+let g:previm_enable_realtime = 1
