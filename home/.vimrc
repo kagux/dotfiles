@@ -26,6 +26,9 @@ Bundle 'bling/vim-airline'
 Bundle 'kagux/vim-test-runner'
 Bundle 'Valloric/YouCompleteMe'
 
+" dockerfile syntax
+Bundle 'honza/dockerfile.vim'
+
 "Open URI with your favorite browser
 Bundle 'tyru/open-browser.vim'
 
