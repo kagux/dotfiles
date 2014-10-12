@@ -100,7 +100,11 @@ if !has("gui_running")
 endif
 set t_Co=256
 set background=dark    " Setting dark mode "
-colorscheme gruvbox
+try
+  colorscheme gruvbox
+catch /^Vim\%((\a\+)\)\=:E185/
+    " deal with it
+endtry
 
 filetype plugin indent on 
 
