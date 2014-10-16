@@ -17,4 +17,9 @@ windows:
         - tail -f /vagrant/log/development.log
         - server:
           - rails server
+        - bundle exec guard
+      panes:
+        - console
+        - console
+        - console
         - console
