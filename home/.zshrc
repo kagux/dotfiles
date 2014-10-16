@@ -45,7 +45,7 @@ plugins=(git gitfast capistrano rails composer ruby symfony2)
 source $ZSH/oh-my-zsh.sh
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
 # Customize to your needs...
-export PATH=$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
+export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
 export TERM=xterm-256color
 export PHPBREW_SET_PROMPT=1
 export EDITOR='vim'

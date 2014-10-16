@@ -21,16 +21,28 @@ Bundle 'tmhedberg/matchit.git'
 Bundle 'joonty/vdebug.git'
 Bundle 'scrooloose/syntastic.git'
 Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-surround'
 Bundle 'godlygeek/tabular'
 Bundle 'bling/vim-airline'
 Bundle 'kagux/vim-test-runner'
 Bundle 'Valloric/YouCompleteMe'
-Bundle 'wesQ3/vim-windowswap'
 
-"tags
-" Bundle 'xolox/vim-easytags'
-" Bundle 'xolox/vim-misc'
+" dockerfile syntax
+Bundle 'honza/dockerfile.vim'
+
+"Open URI with your favorite browser
+Bundle 'tyru/open-browser.vim'
+
+"markdown
+Bundle 'tpope/vim-markdown'
+
+"Realtime preview Markdown, reStructuredText, textile
+Bundle 'kannokanno/previm'
+
+"visually highlight indents
+Bundle 'nathanaelkane/vim-indent-guides.git'
+
+"local vim configs to use in projects
+Bundle 'embear/vim-localvimrc'
 
 "themes
 Bundle 'morhetz/gruvbox.git'
@@ -47,6 +59,7 @@ Bundle 'kchmck/vim-coffee-script.git'
 
 "js
 Bundle 'mustache/vim-mustache-handlebars'
+Bundle 'jelera/vim-javascript-syntax'
 
 "ruby
 Bundle 'vim-ruby/vim-ruby'
@@ -60,10 +73,10 @@ Bundle 'arnaud-lb/vim-php-namespace'
 Bundle 'StanAngeloff/php.vim.git'
 Bundle 'evidens/vim-twig.git'
 Bundle '2072/PHP-Indenting-for-VIm'
-Bundle 'shawncplus/phpcomplete.vim'
 
 "git
 Bundle 'tpope/vim-fugitive.git'
+Bundle 'airblade/vim-gitgutter'
 
 "fast search in files
 Bundle 'rking/ag.vim'
@@ -87,7 +100,11 @@ if !has("gui_running")
 endif
 set t_Co=256
 set background=dark    " Setting dark mode "
-colorscheme gruvbox
+try
+  colorscheme gruvbox
+catch /^Vim\%((\a\+)\)\=:E185/
+    " deal with it
+endtry
 
 filetype plugin indent on 
 
@@ -170,7 +187,7 @@ nnoremap K :Ag<CR>
 nnoremap \ :Ag<SPACE>
 
 if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  let g:ctrlp_user_command = 'ag %s -l --skip-vcs-ignores --nocolor -g ""'
 endif
 
 " ctrlp config
@@ -245,3 +262,16 @@ function! ChangePaste(type, ...)
     silent exe "normal! `[v`]\"_c"
     silent exe "normal! p"
 endfunction
+
+
+
+silent! nunmap CR-]
+
+
+
+"yankring
+let g:yankring_replace_n_pkey = '<C-m>'
+nnoremap <silent> <leader>yr :YRShow<CR> 
+
+" Realtime preview
+let g:previm_enable_realtime = 1
