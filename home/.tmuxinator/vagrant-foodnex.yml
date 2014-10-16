@@ -17,3 +17,4 @@ windows:
         - tail -f /vagrant/log/development.log
         - server:
           - rails server
+        - console
