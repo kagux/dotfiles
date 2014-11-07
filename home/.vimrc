@@ -81,6 +81,12 @@ Bundle 'airblade/vim-gitgutter'
 "fast search in files
 Bundle 'rking/ag.vim'
 
+"yaml
+Bundle 'chase/vim-ansible-yaml'
+
+"tmux integration
+Bundle 'christoomey/vim-tmux-navigator'
+
 let mapleader=","
 nnoremap <leader><leader> <c-^> " switch between current and prev buffers
 
