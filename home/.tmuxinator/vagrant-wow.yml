@@ -13,7 +13,7 @@ windows:
   - rails:
       layout: tiled
       panes:
-        - console
+        - shell
         - tail -f /vagrant/log/development.log
         - server:
           - rails server

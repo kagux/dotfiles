@@ -26,6 +26,9 @@ Bundle 'bling/vim-airline'
 Bundle 'kagux/vim-test-runner'
 Bundle 'Valloric/YouCompleteMe'
 
+" Apache syntax
+Bundle 'apeschel/vim-syntax-apache'
+
 " dockerfile syntax
 Bundle 'honza/dockerfile.vim'
 
@@ -67,6 +70,7 @@ Bundle 'ecomba/vim-ruby-refactoring.git'
 Bundle 'tpope/vim-endwise.git'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-bundler'
+Bundle 'slim-template/vim-slim'
 
 "php
 Bundle 'arnaud-lb/vim-php-namespace'

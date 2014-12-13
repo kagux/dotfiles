@@ -13,13 +13,13 @@ windows:
   - rails:
       layout: tiled
       panes:
-        - console
+        - shell
         - tail -f /vagrant/log/development.log
         - server:
           - rails server
         - bundle exec guard
       panes:
-        - console
-        - console
-        - console
-        - console
+        - shell
+        - shell
+        - shell
+        - shell

@@ -1,0 +1,29 @@
+# ~/.tmuxinator/f_provision.yml
+
+name: f_provision
+root: ~/Projects/_/provision
+
+windows:
+  - editor:
+      layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
+      panes:
+        - vim
+        - terminal:
+            clear
+
+  - consoles:
+      layout: tiled
+      panes:
+        - provisioner:
+          - vagrant up 
+          - vagrant ssh
+          - cd /vagrant
+
+        - server:
+          - sleep 90 
+          - vagrant ssh server
+
+        - containers:
+          - sleep 90 
+          - vagrant ssh server
+          - watch sudo docker ps
