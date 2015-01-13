@@ -1,2 +1,3 @@
 #!/bin/bash
-vim +BundleInstall +qall
+git submodule update --init --recursive
+vim +PluginInstall +qall

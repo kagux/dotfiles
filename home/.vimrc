@@ -1,95 +1,93 @@
 set nocompatible               " be iMproved
 filetype off                   " required!
 
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
 
-" let Vundle manage Vundle
-" required! 
-Bundle 'gmarik/vundle'
+" let Vundle manage Vundle, required
+Plugin 'gmarik/Vundle.vim'
 
-" My Bundles here:
-"
 " original repos on github
-Bundle 'scrooloose/nerdtree.git'
-Bundle 'tpope/vim-surround'
-Bundle 'Townk/vim-autoclose'
-Bundle 'kien/ctrlp.vim'
-Bundle 'benmills/vimux'
-Bundle 'docunext/closetag.vim.git'
-Bundle 'tmhedberg/matchit.git'
-Bundle 'joonty/vdebug.git'
-Bundle 'scrooloose/syntastic.git'
-Bundle 'tpope/vim-commentary'
-Bundle 'godlygeek/tabular'
-Bundle 'bling/vim-airline'
-Bundle 'kagux/vim-test-runner'
-Bundle 'Valloric/YouCompleteMe'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'tpope/vim-surround'
+Plugin 'Townk/vim-autoclose'
+Plugin 'kien/ctrlp.vim'
+Plugin 'benmills/vimux'
+Plugin 'docunext/closetag.vim.git'
+Plugin 'tmhedberg/matchit.git'
+Plugin 'joonty/vdebug.git'
+Plugin 'scrooloose/syntastic.git'
+Plugin 'tpope/vim-commentary'
+Plugin 'godlygeek/tabular'
+Plugin 'bling/vim-airline'
+Plugin 'kagux/vim-test-runner'
+Plugin 'Valloric/YouCompleteMe'
 
 " Apache syntax
-Bundle 'apeschel/vim-syntax-apache'
+Plugin 'apeschel/vim-syntax-apache'
 
 " dockerfile syntax
-Bundle 'honza/dockerfile.vim'
+Plugin 'honza/dockerfile.vim'
 
 "Open URI with your favorite browser
-Bundle 'tyru/open-browser.vim'
+Plugin 'tyru/open-browser.vim'
 
 "markdown
-Bundle 'tpope/vim-markdown'
+Plugin 'tpope/vim-markdown'
 
 "Realtime preview Markdown, reStructuredText, textile
-Bundle 'kannokanno/previm'
+Plugin 'kannokanno/previm'
 
 "visually highlight indents
-Bundle 'nathanaelkane/vim-indent-guides.git'
+Plugin 'nathanaelkane/vim-indent-guides.git'
 
 "local vim configs to use in projects
-Bundle 'embear/vim-localvimrc'
+Plugin 'embear/vim-localvimrc'
 
 "themes
-Bundle 'morhetz/gruvbox.git'
+Plugin 'morhetz/gruvbox.git'
 
 "sass
-Bundle 'cakebaker/scss-syntax.vim'
+Plugin 'cakebaker/scss-syntax.vim'
 
 "less
-Bundle 'groenewege/vim-less'
+Plugin 'groenewege/vim-less'
 
 "coffescript
-Bundle 'AndrewRadev/vim-eco.git'
-Bundle 'kchmck/vim-coffee-script.git'
+Plugin 'AndrewRadev/vim-eco.git'
+Plugin 'kchmck/vim-coffee-script.git'
 
 "js
-Bundle 'mustache/vim-mustache-handlebars'
-Bundle 'jelera/vim-javascript-syntax'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'jelera/vim-javascript-syntax'
 
 "ruby
-Bundle 'vim-ruby/vim-ruby'
-Bundle 'ecomba/vim-ruby-refactoring.git'
-Bundle 'tpope/vim-endwise.git'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-bundler'
-Bundle 'slim-template/vim-slim'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'ecomba/vim-ruby-refactoring.git'
+Plugin 'tpope/vim-endwise.git'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
+Plugin 'slim-template/vim-slim'
 
 "php
-Bundle 'arnaud-lb/vim-php-namespace'
-Bundle 'StanAngeloff/php.vim.git'
-Bundle 'evidens/vim-twig.git'
-Bundle '2072/PHP-Indenting-for-VIm'
+Plugin 'arnaud-lb/vim-php-namespace'
+Plugin 'StanAngeloff/php.vim.git'
+Plugin 'evidens/vim-twig.git'
+Plugin '2072/PHP-Indenting-for-VIm'
 
 "git
-Bundle 'tpope/vim-fugitive.git'
-Bundle 'airblade/vim-gitgutter'
+Plugin 'tpope/vim-fugitive.git'
+Plugin 'airblade/vim-gitgutter'
 
 "fast search in files
-Bundle 'rking/ag.vim'
+Plugin 'rking/ag.vim'
 
 "yaml
-Bundle 'chase/vim-ansible-yaml'
+Plugin 'chase/vim-ansible-yaml'
 
 "tmux integration
-Bundle 'christoomey/vim-tmux-navigator'
+Plugin 'christoomey/vim-tmux-navigator'
 
 let mapleader=","
 nnoremap <leader><leader> <c-^> " switch between current and prev buffers
