@@ -89,6 +89,8 @@ Plugin 'chase/vim-ansible-yaml'
 "tmux integration
 Plugin 'christoomey/vim-tmux-navigator'
 
+call vundle#end()
+
 let mapleader=","
 nnoremap <leader><leader> <c-^> " switch between current and prev buffers
 
