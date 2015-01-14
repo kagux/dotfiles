@@ -21,7 +21,8 @@ Plugin 'scrooloose/syntastic.git'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'
-Plugin 'kagux/vim-test-runner'
+" Plugin 'kagux/vim-test-runner'
+Plugin 'janko-m/vim-test'
 Plugin 'Valloric/YouCompleteMe'
 
 " Apache syntax
@@ -185,6 +186,12 @@ let g:VimuxOrientation = 'h'
 let g:VimuxHeight = "30"
 
 " test-runner
+" let g:test#strategy = 'vimux'
+nmap <silent> <leader>t :TestNearest<CR>
+nmap <silent> <leader>T :TestFile<CR>
+nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>l :TestLast<CR>
+
 let g:test_runner_run_command = 'call VimuxRunCommand("{test_command}")'
 let g:test_runner_phpspec_command = 'bin/phpspec run -f dot {tests_path}'
 let g:test_runner_phpunit_command = 'bin/phpunit {tests_path}'
