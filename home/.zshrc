@@ -1,12 +1,10 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="ys"
-plugins=(git gitfast capistrano rails composer ruby symfony2)
-
+plugins=(git gitfast ruby)
 
 function load_source(){
   [[ -s "$1" ]] && source "$1" 
 }
-
 
 source $ZSH/oh-my-zsh.sh
 
