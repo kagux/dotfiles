@@ -1,19 +1,30 @@
 # ~/.tmuxinator/appappeal.yml
 
 name: appappeal
-root: /vagrant
+root: ~/Projects/app_appeal
+pre: vagrant up
 
 windows:
   - editor:
       layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
       panes:
         - vim
-        - clear
+        - shell:
+            - vagrant ssh
+            - cd /vagrant
   - rails:
       layout: tiled
       panes:
-        - clear
-        - clear
-        - tail -f /vagrant/log/development.log
+        - shell:
+            - vagrant ssh
+            - cd /vagrant
+        - shell:
+            - vagrant ssh
+            - cd /vagrant
+        - logs:
+            - vagrant ssh
+            - tail -f /vagrant/log/development.log
         - server:
+          - vagrant ssh
+          - cd /vagrant
           - rails server
