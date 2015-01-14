@@ -1,1 +1,3 @@
-system File.read('install.sh')
+# vim: ft=ruby
+install_cmd = File.expand_path File.join(File.dirname(__FILE__), 'install.sh')
+system "bash -c #{install_cmd}"
