@@ -1,0 +1,27 @@
+# ~/.tmuxinator/provision.yml
+
+name: provision
+root: ~/Projects/provision
+
+windows:
+  - editor:
+      layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
+      panes:
+        - vim
+        - clear
+
+  - shells:
+      layout: tiled
+      panes:
+        - clear
+        - clear
+        - clear
+        - clear
+
+  - shells:
+      layout: tiled
+      panes:
+        - clear
+        - clear
+        - clear
+        - clear
