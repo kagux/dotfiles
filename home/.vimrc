@@ -186,7 +186,7 @@ let g:VimuxOrientation = 'h'
 let g:VimuxHeight = "30"
 
 " test-runner
-" let g:test#strategy = 'vimux'
+let g:test#strategy = 'vimux'
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
