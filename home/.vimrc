@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'tpope/vim-surround'
 Plugin 'Townk/vim-autoclose'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'benmills/vimux'
 Plugin 'docunext/closetag.vim.git'
 Plugin 'tmhedberg/matchit.git'
@@ -24,6 +24,17 @@ Plugin 'bling/vim-airline'
 " Plugin 'kagux/vim-test-runner'
 Plugin 'janko-m/vim-test'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'nelstrom/vim-qargs'
+
+" highlight search letters
+Plugin 'unblevable/quick-scope' 
+
+"todo list manager
+Plugin 'vitalk/vim-simple-todo'
+
+"sql
+Plugin 'dbext.vim'
+Plugin 'SQLComplete.vim'
 
 " Apache syntax
 Plugin 'apeschel/vim-syntax-apache'
@@ -250,3 +261,9 @@ silent! nunmap CR-]
 
 " Realtime preview
 let g:previm_enable_realtime = 1
+
+
+let test#runners = {'php': ['PhpUnit', 'PhpSpec']}
+
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gp :Gpush<CR>
