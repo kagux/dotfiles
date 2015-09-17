@@ -203,11 +203,6 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 
-let g:test_runner_run_command = 'call VimuxRunCommand("{test_command}")'
-let g:test_runner_phpspec_command = 'bin/phpspec run -f dot {tests_path}'
-let g:test_runner_phpunit_command = 'bin/phpunit {tests_path}'
-let g:test_runner_rspec_command = 'spring rspec {tests_path}'
-
 " Silversearcher config
 "
 " bind K to grep word under cursor
@@ -262,8 +257,6 @@ silent! nunmap CR-]
 " Realtime preview
 let g:previm_enable_realtime = 1
 
-
-let test#runners = {'php': ['PhpUnit', 'PhpSpec']}
 
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gp :Gpush<CR>
