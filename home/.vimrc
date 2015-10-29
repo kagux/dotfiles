@@ -101,6 +101,9 @@ Plugin 'chase/vim-ansible-yaml'
 "tmux integration
 Plugin 'christoomey/vim-tmux-navigator'
 
+"elixir
+Plugin 'elixir-lang/vim-elixir'
+
 call vundle#end()
 
 let mapleader=","
