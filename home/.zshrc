@@ -23,6 +23,10 @@ export VAGRANT_HOME=/Volumes/Transcend/VM/vagrand_home
 load_source "$HOME/.phpbrew/bashrc"
 load_source "$HOME/.tmux/tmuxinator.zsh"
 
-alias rake='noglob rake'
+alias rake='noglob bundle exec rake'
+alias cap='bundle exec cap'
+alias foreman='bundle exec foreman'
+alias ./bin/rspec='bundle exec ./bin/rspec'
+alias rails='bundle exec rails'
 
 eval `gnome-keyring-daemon --start 2> /dev/null` 
