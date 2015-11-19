@@ -22,6 +22,10 @@ export EDITOR='vim'
 load_source "$HOME/.phpbrew/bashrc"
 load_source "$HOME/.tmux/tmuxinator.zsh"
 
-alias rake='noglob rake'
+alias rake='noglob bundle exec rake'
+alias foreman='bundle exec foreman'
+alias rails='bundle exec rails'
+alias unicorn='bundle exec unicorn'
+alias thin='bundle exec thin'
 
 eval `gnome-keyring-daemon --start 2> /dev/null` 
