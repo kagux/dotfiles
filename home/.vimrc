@@ -21,10 +21,11 @@ Plugin 'scrooloose/syntastic.git'
 Plugin 'tpope/vim-commentary'
 Plugin 'godlygeek/tabular'
 Plugin 'bling/vim-airline'
-" Plugin 'kagux/vim-test-runner'
 Plugin 'janko-m/vim-test'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'nelstrom/vim-qargs'
+
+Plugin '907th/vim-auto-save'
 
 " highlight search letters
 Plugin 'unblevable/quick-scope' 
@@ -73,6 +74,8 @@ Plugin 'kchmck/vim-coffee-script.git'
 "js
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'jelera/vim-javascript-syntax'
+Plugin 'mxw/vim-jsx'
+Plugin 'isRuslan/vim-es6'
 
 "ruby
 Plugin 'vim-ruby/vim-ruby'
@@ -234,16 +237,19 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""" Autosave and syntax check """""""""""""""""""""""""
-set updatetime=200
-autocmd CursorHold,CursorHoldI,InsertLeave * call AutoSave()
+let g:auto_save = 1
+let g:auto_save_postsave_hook = 'SyntasticCheck'
+let g:auto_save_in_insert_mode = 0
+" set updatetime=1000
+" autocmd CursorHold,CursorHoldI,InsertLeave * call AutoSave()
 
-function! AutoSave()
-  if &modified
-    silent! wa
-    SyntasticCheck
-    echo "(AutoSaved at " . strftime("%T") . ")"
-  endif
-endfunction
+" function! AutoSave()
+"   if &modified
+"     silent! wa!
+"     SyntasticCheck
+"     echo "(AutoSaved at " . strftime("%T") . ")"
+"   endif
+" endfunction
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 "This allows for change paste motion cp{motion}
@@ -261,5 +267,9 @@ silent! nunmap CR-]
 let g:previm_enable_realtime = 1
 
 
+
 noremap <Leader>gs :Gstatus<CR>
 noremap <Leader>gp :Gpush<CR>
+
+" highlight jsx in js files
+let g:jsx_ext_required = 0

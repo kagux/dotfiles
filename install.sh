@@ -15,5 +15,5 @@ fi
 # run install.sh of YouCompleteMe if it wasn't run before and Plugin is present
 if [ -d "$YOU_COMPLETE_ME_PATH" ] && [ ! -f "$YOU_COMPLETE_ME_PATH/third_party/ycmd/ycm_client_support.so" ]; then
   echo 'youcomplete me found but not setup'
-  exec "$YOU_COMPLETE_ME_PATH/install.sh"
+  python "$YOU_COMPLETE_ME_PATH/install.py"
 fi

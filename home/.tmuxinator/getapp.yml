@@ -1,7 +1,7 @@
 # ~/.tmuxinator/getapp.yml
 
 name: getapp
-root: ~/Projects/getapp/current
+root: ~/Projects/getapp
 pre: vagrant up
 
 windows:
@@ -16,33 +16,22 @@ windows:
   - local_servers:
       layout: tiled
       panes:
-        - foreman:
+        - frontend_services:
             - sleep 20
             - vagrant ssh
             - cd /vagrant
-            - foreman start -f Procfile.dev
-        - unicorn:
+            - foreman start -f Procfile.dev.frontend
+        - backend_services:
             - sleep 30
             - vagrant ssh
             - cd /vagrant
-            - unicorn -l 0.0.0.0:9292 config.ru
-
-  - shells:
-      layout: tiled
-      panes:
-        - shell:
+            - foreman start -f Procfile.dev.backend
+        - server:
             - sleep 40
             - vagrant ssh
             - cd /vagrant
+            - DEBUG_SQL=true thin -p 9292 start
         - shell:
             - sleep 50
-            - vagrant ssh
-            - cd /vagrant
-        - shell:
-            - sleep 60
-            - vagrant ssh
-            - cd /vagrant
-        - shell:
-            - sleep 70
             - vagrant ssh
             - cd /vagrant
