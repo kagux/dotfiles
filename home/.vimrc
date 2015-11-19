@@ -12,7 +12,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'tpope/vim-surround'
 Plugin 'Townk/vim-autoclose'
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'benmills/vimux'
 Plugin 'docunext/closetag.vim.git'
 Plugin 'tmhedberg/matchit.git'
@@ -24,6 +24,17 @@ Plugin 'bling/vim-airline'
 " Plugin 'kagux/vim-test-runner'
 Plugin 'janko-m/vim-test'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'nelstrom/vim-qargs'
+
+" highlight search letters
+Plugin 'unblevable/quick-scope' 
+
+"todo list manager
+Plugin 'vitalk/vim-simple-todo'
+
+"sql
+Plugin 'dbext.vim'
+Plugin 'SQLComplete.vim'
 
 " Apache syntax
 Plugin 'apeschel/vim-syntax-apache'
@@ -89,6 +100,9 @@ Plugin 'chase/vim-ansible-yaml'
 
 "tmux integration
 Plugin 'christoomey/vim-tmux-navigator'
+
+"elixir
+Plugin 'elixir-lang/vim-elixir'
 
 call vundle#end()
 
@@ -192,11 +206,6 @@ nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
 nmap <silent> <leader>l :TestLast<CR>
 
-let g:test_runner_run_command = 'call VimuxRunCommand("{test_command}")'
-let g:test_runner_phpspec_command = 'bin/phpspec run -f dot {tests_path}'
-let g:test_runner_phpunit_command = 'bin/phpunit {tests_path}'
-let g:test_runner_rspec_command = 'spring rspec {tests_path}'
-
 " Silversearcher config
 "
 " bind K to grep word under cursor
@@ -250,3 +259,7 @@ silent! nunmap CR-]
 
 " Realtime preview
 let g:previm_enable_realtime = 1
+
+
+noremap <Leader>gs :Gstatus<CR>
+noremap <Leader>gp :Gpush<CR>

@@ -16,15 +16,19 @@ windows:
       layout: tiled
       panes:
         - shell:
+            - sleep 20
             - vagrant ssh
             - cd /vagrant
         - shell:
+            - sleep 30
             - vagrant ssh
             - cd /vagrant
         - logs:
+            - sleep 40
             - vagrant ssh
             - tail -f /vagrant/log/development.log
         - server:
-          - vagrant ssh
-          - cd /vagrant
-          - rails server
+            - sleep 50
+            - vagrant ssh
+            - cd /vagrant
+            - foreman start

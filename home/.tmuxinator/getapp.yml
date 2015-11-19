@@ -2,28 +2,47 @@
 
 name: getapp
 root: ~/Projects/getapp/current
+pre: vagrant up
 
 windows:
   - editor:
       layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
       panes:
         - vim
-        - clear
+        - shell:
+            - vagrant ssh
+            - cd /vagrant
 
   - local_servers:
       layout: tiled
       panes:
         - foreman:
             - sleep 20
+            - vagrant ssh
+            - cd /vagrant
             - foreman start -f Procfile.dev
         - unicorn:
-            - sleep 20
+            - sleep 30
+            - vagrant ssh
+            - cd /vagrant
             - unicorn -l 0.0.0.0:9292 config.ru
 
   - shells:
       layout: tiled
       panes:
-        - clear
-        - clear
-        - clear
-        - clear
+        - shell:
+            - sleep 40
+            - vagrant ssh
+            - cd /vagrant
+        - shell:
+            - sleep 50
+            - vagrant ssh
+            - cd /vagrant
+        - shell:
+            - sleep 60
+            - vagrant ssh
+            - cd /vagrant
+        - shell:
+            - sleep 70
+            - vagrant ssh
+            - cd /vagrant

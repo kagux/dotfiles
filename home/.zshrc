@@ -17,6 +17,7 @@ export PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:/usr/local/share/npm/bin:/usr/li
 export TERM=xterm-256color
 export PHPBREW_SET_PROMPT=1
 export EDITOR='vim'
+export VAGRANT_HOME=/Volumes/Transcend/VM/vagrand_home
 
 
 load_source "$HOME/.phpbrew/bashrc"
@@ -27,5 +28,7 @@ alias foreman='bundle exec foreman'
 alias rails='bundle exec rails'
 alias unicorn='bundle exec unicorn'
 alias thin='bundle exec thin'
+alias cap='bundle exec cap'
+alias ./bin/rspec='bundle exec ./bin/rspec'
 
 eval `gnome-keyring-daemon --start 2> /dev/null` 
