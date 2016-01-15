@@ -15,14 +15,14 @@ load_source "/usr/local/rvm/scripts/rvm"
 # Customize to your needs...
 export TERM=xterm-256color
 export PHPBREW_SET_PROMPT=1
-export EDITOR='vim'
+export EDITOR='nvim'
 export GOPATH=$HOME/Projects/go
-export PATH=/usr/local/bin:$PATH:$GOPATH/go/bin:$HOME/.rvm/bin:/usr/local/share/npm/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games
-
+export PATH=$PWD/node_modules/.bin:/$GOPATH/go/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH 
 
 load_source "$HOME/.phpbrew/bashrc"
 load_source "$HOME/.tmux/tmuxinator.zsh"
 
+# alias ruby stuff
 alias rake='noglob bundle exec rake'
 alias foreman='bundle exec foreman'
 alias rails='bundle exec rails'
@@ -30,5 +30,8 @@ alias unicorn='bundle exec unicorn'
 alias thin='bundle exec thin'
 alias cap='bundle exec cap'
 alias ./bin/rspec='bundle exec ./bin/rspec'
+
+# neovim -> vim
+alias vim='nvim'
 
 eval `gnome-keyring-daemon --start 2> /dev/null` 

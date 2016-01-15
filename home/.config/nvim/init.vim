@@ -1,125 +1,139 @@
-set nocompatible               " be iMproved
-filetype off                   " required!
+call plug#begin('~/.config/nvim/plugged')
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+" Nertdree and plugins
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
+Plug 'tpope/vim-surround'
+Plug 'Townk/vim-autoclose'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'benmills/vimux'
+Plug 'docunext/closetag.vim'
+Plug 'joonty/vdebug'
+Plug 'tpope/vim-commentary'
+Plug 'godlygeek/tabular'
+Plug 'bling/vim-airline'
+Plug 'janko-m/vim-test'
+Plug 'Valloric/YouCompleteMe'
+Plug 'nelstrom/vim-qargs'
 
-" original repos on github
-Plugin 'scrooloose/nerdtree.git'
-Plugin 'tpope/vim-surround'
-Plugin 'Townk/vim-autoclose'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'benmills/vimux'
-Plugin 'docunext/closetag.vim.git'
-Plugin 'tmhedberg/matchit.git'
-Plugin 'joonty/vdebug.git'
-Plugin 'scrooloose/syntastic.git'
-Plugin 'tpope/vim-commentary'
-Plugin 'godlygeek/tabular'
-Plugin 'bling/vim-airline'
-Plugin 'janko-m/vim-test'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'nelstrom/vim-qargs'
+" snippets
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
+Plug 'kagux/vim-ultisnips-javascript'
 
-Plugin '907th/vim-auto-save'
+" visualize undo tree
+Plug 'simnalamburt/vim-mundo'
+
+" Auto load changes
+Plug 'djoshea/vim-autoread'
+
+" Syntax check
+Plug 'benekastah/neomake'
+
+" rainbow parentheses
+Plug 'kien/rainbow_parentheses.vim'
+
+" Automatic resizing of Vim windows to the golden ration
+Plug 'roman/golden-ratio'
+
+" visually displaying indent levels
+Plug 'nathanaelkane/vim-indent-guides'
+
+" more text objects
+Plug 'wellle/targets.vim'
+
+Plug '907th/vim-auto-save'
 
 " highlight search letters
-Plugin 'unblevable/quick-scope' 
+Plug 'unblevable/quick-scope' 
 
 "todo list manager
-Plugin 'vitalk/vim-simple-todo'
+Plug 'vitalk/vim-simple-todo'
 
 "sql
-Plugin 'dbext.vim'
-Plugin 'SQLComplete.vim'
+Plug 'dbext.vim'
+Plug 'SQLComplete.vim'
 
 " Apache syntax
-Plugin 'apeschel/vim-syntax-apache'
+Plug 'apeschel/vim-syntax-apache'
 
 " dockerfile syntax
-Plugin 'honza/dockerfile.vim'
+Plug 'honza/dockerfile.vim'
 
 "Open URI with your favorite browser
-Plugin 'tyru/open-browser.vim'
+Plug 'tyru/open-browser.vim'
 
 "markdown
-Plugin 'tpope/vim-markdown'
+Plug 'tpope/vim-markdown'
 
 "Realtime preview Markdown, reStructuredText, textile
-Plugin 'kannokanno/previm'
-
-"visually highlight indents
-Plugin 'nathanaelkane/vim-indent-guides.git'
+Plug 'kannokanno/previm'
 
 "local vim configs to use in projects
-Plugin 'embear/vim-localvimrc'
+Plug 'embear/vim-localvimrc'
 
 "themes
-Plugin 'morhetz/gruvbox.git'
+Plug 'morhetz/gruvbox'
 
 "sass
-Plugin 'cakebaker/scss-syntax.vim'
+Plug 'cakebaker/scss-syntax.vim'
 
 "less
-Plugin 'groenewege/vim-less'
+Plug 'groenewege/vim-less'
 
 "coffescript
-Plugin 'AndrewRadev/vim-eco.git'
-Plugin 'kchmck/vim-coffee-script.git'
+Plug 'AndrewRadev/vim-eco'
+Plug 'kchmck/vim-coffee-script'
 
 "js
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'jelera/vim-javascript-syntax'
-Plugin 'mxw/vim-jsx'
-Plugin 'isRuslan/vim-es6'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'jelera/vim-javascript-syntax'
+Plug 'mxw/vim-jsx'
+Plug 'isRuslan/vim-es6'
 
 "ruby
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'ecomba/vim-ruby-refactoring.git'
-Plugin 'tpope/vim-endwise.git'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'slim-template/vim-slim'
+Plug 'vim-ruby/vim-ruby'
+Plug 'ecomba/vim-ruby-refactoring'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-bundler'
+Plug 'slim-template/vim-slim'
+Plug 'kagux/vim-rubocop-autocorrect'
 
 "php
-Plugin 'arnaud-lb/vim-php-namespace'
-Plugin 'StanAngeloff/php.vim.git'
-Plugin 'evidens/vim-twig.git'
-Plugin '2072/PHP-Indenting-for-VIm'
+Plug 'arnaud-lb/vim-php-namespace'
+Plug 'StanAngeloff/php.vim'
+Plug 'evidens/vim-twig'
+Plug '2072/PHP-Indenting-for-VIm'
 
 "git
-Plugin 'tpope/vim-fugitive.git'
-Plugin 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
 
 "fast search in files
-Plugin 'rking/ag.vim'
+Plug 'rking/ag.vim'
 
 "yaml
-Plugin 'chase/vim-ansible-yaml'
+Plug 'chase/vim-ansible-yaml'
 
 "tmux integration
-Plugin 'christoomey/vim-tmux-navigator'
+Plug 'christoomey/vim-tmux-navigator'
 
 "elixir
-Plugin 'elixir-lang/vim-elixir'
+Plug 'elixir-lang/vim-elixir'
 
-call vundle#end()
+"golang
+Plug 'fatih/vim-go'
+
+
+call plug#end()
 
 let mapleader=","
 nnoremap <leader><leader> <c-^> " switch between current and prev buffers
 
 " show line numbers
 set nu
-
-" backspace config
-:set backspace=indent,eol,start
-
-" make sure that terminal is seen as 256 color
-set term=screen-256color
 
 " color theme
 syntax enable
@@ -163,14 +177,13 @@ let g:ycm_cache_omnifunc = 1
 set nobackup
 set nowritebackup
 set noswapfile
-set backupdir=~/.vim/backup
-set directory=~/.vim/backup
+set backupdir=~/.config/backup
+set directory=~/.config/backup
 
 set nohidden
 set history=10000
 set ruler
 set switchbuf=useopen
-set encoding=utf-8
 
 " Whitespace stuff
 
@@ -194,7 +207,7 @@ set showcmd
 " toggle nerdtree
 map <leader>f :NERDTreeToggle<CR>
 map <leader>F :NERDTreeFind<CR>
-let g:NERDTreeWinSize=50
+let g:NERDTreeWinSize=80
 
 " vimux config
 
@@ -238,20 +251,11 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""" Autosave and syntax check """""""""""""""""""""""""
 let g:auto_save = 1
-let g:auto_save_postsave_hook = 'SyntasticCheck'
 let g:auto_save_in_insert_mode = 0
-" set updatetime=1000
-" autocmd CursorHold,CursorHoldI,InsertLeave * call AutoSave()
 
-" function! AutoSave()
-"   if &modified
-"     silent! wa!
-"     SyntasticCheck
-"     echo "(AutoSaved at " . strftime("%T") . ")"
-"   endif
-" endfunction
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+:autocmd TextChanged,BufEnter,BufWrite,BufWrite * :Neomake
 
+"
 "This allows for change paste motion cp{motion}
 nmap <silent> cp :set opfunc=ChangePaste<CR>g@
 function! ChangePaste(type, ...)
@@ -273,3 +277,40 @@ noremap <Leader>gp :Gpush<CR>
 
 " highlight jsx in js files
 let g:jsx_ext_required = 0
+
+
+"rainbow parantheses config
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
+
+
+:tnoremap <C-c> <C-\><C-n>
+
+" read local vimrc files
+set exrc
+set secure
+
+
+nnoremap <Leader>u :NERDTreeClose<CR>:GundoToggle<CR>
+
+if exists("+undofile")
+  " undofile - This allows you to use undos after exiting and restarting
+  " This, like swap and backups, uses .vim-undo first, then ~/.vim/tmp/undo
+  " :help undo-persistence
+  " This is only present in 7.3+
+  if isdirectory($HOME . '/.config/tmp/undo') == 0
+    :silent !mkdir -p ~/.config/tmp/undo > /dev/null 2>&1
+  endif
+  set undodir=./.vim-undo//
+  set undodir+=~/.config/tmp/undo//
+  set undofile
+endif
+
+let g:UltiSnipsExpandTrigger="<C-Space>"
+let g:UltiSnipsJumpForwardTrigger="<C-Space>"
+let g:UltiSnipsJumpBackwardTrigger="<c-b>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
