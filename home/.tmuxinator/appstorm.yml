@@ -1,0 +1,31 @@
+# ~/.tmuxinator/appappeal.yml
+
+name: appstorm
+root: ~/Projects/appstorm
+pre: vagrant up
+
+windows:
+  - editor:
+      layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
+      panes:
+        - vim
+        - shell:
+            - vagrant ssh
+            - cd /vagrant
+  - rails:
+      layout: tiled
+      panes:
+        - shell:
+            - sleep 20
+            - vagrant ssh
+            - cd /vagrant
+        - shell:
+            - sleep 30
+            - vagrant ssh
+            - cd /vagrant
+        - logs:
+            - sleep 40
+            - tail -f /vagrant/log/development.log
+        - server:
+            - sleep 50
+            - vagrant ssh

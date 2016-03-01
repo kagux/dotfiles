@@ -1,0 +1,30 @@
+# ~/.tmuxinator/hodor.yml
+
+name: hodor
+root: ~/Projects/hodor
+pre: vagrant up
+
+windows:
+  - editor:
+      layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
+      panes:
+        - vim
+        - shell:
+            - vagrant ssh
+            - cd /vagrant
+  - rails:
+      layout: tiled
+      panes:
+        - shell:
+            - sleep 20
+            - vagrant ssh
+            - cd /vagrant
+        - logs:
+            - tail -f log/development.log
+        - webpack:
+          - ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js
+        - server:
+            - sleep 30
+            - vagrant ssh -- -R 3808:localhost:3808
+            - cd /vagrant
+            - foreman start
