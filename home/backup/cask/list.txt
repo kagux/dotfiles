@@ -19,3 +19,4 @@ gimp
 licecap
 logitech-gaming-software
 vagrant-manager
+dockertoolbox
