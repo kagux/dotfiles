@@ -35,3 +35,5 @@ alias ./bin/rspec='bundle exec ./bin/rspec'
 alias vim='nvim'
 
 eval `gnome-keyring-daemon --start 2> /dev/null` 
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

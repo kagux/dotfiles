@@ -6,7 +6,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 
 Plug 'tpope/vim-surround'
 Plug 'Townk/vim-autoclose'
-Plug 'ctrlpvim/ctrlp.vim'
 Plug 'benmills/vimux'
 Plug 'docunext/closetag.vim'
 Plug 'joonty/vdebug'
@@ -14,8 +13,12 @@ Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
 Plug 'bling/vim-airline'
 Plug 'janko-m/vim-test'
-Plug 'Valloric/YouCompleteMe'
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'nelstrom/vim-qargs'
+
+" fuzzy finder
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 " snippets
 Plug 'SirVer/ultisnips'
@@ -228,17 +231,12 @@ nmap <silent> <leader>l :TestLast<CR>
 nnoremap K :Ag<CR>
 nnoremap \ :Ag<SPACE>
 
-if executable('ag')
-  let g:ctrlp_user_command = 'ag %s -l --skip-vcs-ignores --nocolor -g ""'
-endif
-
-" ctrlp config
-
-let g:ctrlp_cache_dir = $HOME . '/.cache/ctrlp'
-
-let g:ctrlp_map = '<c-p>'
-" Set no max file limit
-let g:ctrlp_max_files = 0
+" config fzf as ctrlp
+let g:fzf_action = {
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \ }
+nnoremap <c-p> :FZF<cr>
 
 let FILETAG=expand("./tags")
 if filereadable(FILETAG)
@@ -285,8 +283,6 @@ au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
 
-
-:tnoremap <C-c> <C-\><C-n>
 
 " read local vimrc files
 set exrc
