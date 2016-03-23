@@ -21,5 +21,8 @@ n stable
 # install neovim
 source ./neovim/install.sh
 
+# install tmuxinator
+sudo gem install tmuxinator
+
 # install oh-my-zsh
 source ./oh-my-zsh/install.sh
