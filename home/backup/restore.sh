@@ -6,9 +6,6 @@ source ./homebrew/install.sh
 # restore brew apps
 source ./homebrew/restore.sh
 
-# install oh-my-zsh
-source ./oh-my-zsh/install.sh
-
 # restore cask apps
 cat cask/list.txt | xargs brew cask install
 
@@ -20,3 +17,9 @@ wget https://raw.githubusercontent.com/morhetz/gruvbox-contrib/master/iterm2/gru
 
 # install stable nodejs
 n stable
+
+# install neovim
+source ./neovim/install.sh
+
+# install oh-my-zsh
+source ./oh-my-zsh/install.sh
