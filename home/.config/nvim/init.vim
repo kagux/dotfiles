@@ -234,7 +234,8 @@ nnoremap \ :Ag<SPACE>
 " config fzf as ctrlp
 let g:fzf_action = {
       \ 'ctrl-s': 'split',
-      \ 'ctrl-v': 'vsplit'
+      \ 'ctrl-v': 'vsplit',
+      \ 'ctrl-t': 'tab split'
       \ }
 nnoremap <c-p> :FZF<cr>
 
