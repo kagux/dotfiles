@@ -25,6 +25,6 @@ windows:
           - ./node_modules/.bin/webpack-dev-server --config config/webpack.config.babel.js
         - server:
             - sleep 30
-            - vagrant ssh -- -R 3808:localhost:3809
+            - vagrant ssh -- -R 3809:localhost:3809
             - cd /vagrant
             - foreman start

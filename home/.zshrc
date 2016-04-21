@@ -17,7 +17,7 @@ export TERM=xterm-256color
 export PHPBREW_SET_PROMPT=1
 export EDITOR='nvim'
 export GOPATH=$HOME/Projects/go
-export PATH=$PWD/node_modules/.bin:$GOPATH/go/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH 
+export PATH=$PWD/node_modules/.bin:$GOPATH/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH 
 
 load_source "$HOME/.phpbrew/bashrc"
 load_source "$HOME/.tmux/tmuxinator.zsh"
