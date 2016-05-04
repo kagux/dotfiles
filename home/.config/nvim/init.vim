@@ -172,6 +172,7 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " autocomplete to longest common mantch and show even if there is only one option 
 set completeopt=menuone,longest
 
+inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-j>"))
 inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-k>"))
 
