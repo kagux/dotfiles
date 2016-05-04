@@ -13,8 +13,8 @@ Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
 Plug 'bling/vim-airline'
 Plug 'janko-m/vim-test'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 Plug 'nelstrom/vim-qargs'
+
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -32,7 +32,7 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'djoshea/vim-autoread'
 
 " Syntax check
-Plug 'benekastah/neomake'
+Plug 'blueyed/neomake', { 'branch': 'process-by-tabwin' }
 
 " rainbow parentheses
 Plug 'kien/rainbow_parentheses.vim'
@@ -128,8 +128,12 @@ Plug 'elixir-lang/vim-elixir'
 
 "golang
 Plug 'fatih/vim-go'
-
-
+"
+" autocomplete
+function! DoRemote(arg)
+  UpdateRemotePlugins
+endfunction
+Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 call plug#end()
 
 let mapleader=","
@@ -154,6 +158,10 @@ endtry
 filetype plugin indent on 
 
 """""""" AUTOCOMPLETE
+let g:deoplete#enable_at_startup = 1
+if !exists('g:deoplete#omni#input_patterns')
+  let g:deoplete#omni#input_patterns = {}
+endif
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType eco set omnifunc=htmlcomplete#CompleteTags
@@ -164,13 +172,8 @@ autocmd FileType php set omnifunc=phpcomplete#CompletePHP
 " autocomplete to longest common mantch and show even if there is only one option 
 set completeopt=menuone,longest
 
-" select suggestion using tab and navigate with C-j and C-k
-" inoremap <expr> <TAB> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-j>"))
 inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-k>"))
-let g:ycm_collect_identifiers_from_tags_files = 1
-let g:ycm_seed_identifiers_with_syntax = 1
-let g:ycm_cache_omnifunc = 1
 
 
 

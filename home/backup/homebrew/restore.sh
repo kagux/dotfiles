@@ -39,4 +39,5 @@ install_package wxmac ''
 install_package xz ''
 install_package zsh ''
 install_package zsh-completions ''
+install_package python3 ''
 [ ! -z $failed_items ] && echo The following items were failed to install: && echo $failed_items
