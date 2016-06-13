@@ -2,7 +2,7 @@
 
 name: hodor
 root: ~/Projects/hodor
-pre: vagrant up
+pre: vagrant up; [ -f .vagrant-ssh.local ] || (vagrant ssh-config --host default> .vagrant-ssh.local)
 
 windows:
   - editor:
@@ -16,7 +16,6 @@ windows:
       layout: tiled
       panes:
         - shell:
-            - sleep 20
             - vagrant ssh
             - cd /vagrant
         - logs:
@@ -24,7 +23,6 @@ windows:
         - webpack:
           - ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js
         - server:
-            - sleep 30
             - vagrant ssh -- -R 3808:localhost:3808
             - cd /vagrant
             - foreman start

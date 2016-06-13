@@ -1,7 +1,7 @@
-# ~/.tmuxinator/dev_server.yml
+# ~/.tmuxinator/wow.yml
 
-name: dev_server
-root: ~/Projects/dev_server
+name: wow_trader
+root: ~/Projects/wow_trader
 pre: vagrant up; [ -f .vagrant-ssh.local ] || (vagrant ssh-config --host default> .vagrant-ssh.local)
 
 windows:
@@ -18,11 +18,10 @@ windows:
         - shell:
             - vagrant ssh
             - cd /vagrant
-        - shell:
-            - vagrant ssh
-            - cd /vagrant
         - logs:
-            - tail -f /vagrant/log/development.log
+            - tail -f log/development.log
+        - shell:
+          - clear
         - server:
             - vagrant ssh
             - cd /vagrant

@@ -2,7 +2,7 @@
 
 name: getapp
 root: ~/Projects/getapp
-pre: vagrant up
+pre: vagrant up; [ -f .vagrant-ssh.local ] || (vagrant ssh-config --host default> .vagrant-ssh.local)
 
 windows:
   - editor:
@@ -17,21 +17,17 @@ windows:
       layout: tiled
       panes:
         - frontend_services:
-            - sleep 20
             - vagrant ssh
             - cd /vagrant
             - foreman start -f Procfile.dev.frontend
         - backend_services:
-            - sleep 30
             - vagrant ssh
             - cd /vagrant
             - foreman start -f Procfile.dev.backend
         - server:
-            - sleep 40
             - vagrant ssh
             - cd /vagrant
             - DEBUG_SQL=true thin -p 9292 start
         - shell:
-            - sleep 50
             - vagrant ssh
             - cd /vagrant

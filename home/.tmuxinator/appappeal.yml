@@ -2,7 +2,7 @@
 
 name: appappeal
 root: ~/Projects/appappeal
-pre: vagrant up
+pre: vagrant up; [ -f .vagrant-ssh.local ] || (vagrant ssh-config --host default> .vagrant-ssh.local)
 
 windows:
   - editor:
@@ -16,18 +16,14 @@ windows:
       layout: tiled
       panes:
         - shell:
-            - sleep 20
             - vagrant ssh
             - cd /vagrant
         - shell:
-            - sleep 30
             - vagrant ssh
             - cd /vagrant
         - logs:
-            - sleep 40
             - tail -f /vagrant/log/development.log
         - server:
-            - sleep 50
             - vagrant ssh
             - cd /vagrant
             - foreman start
