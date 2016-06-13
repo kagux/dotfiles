@@ -10,24 +10,24 @@ windows:
       panes:
         - vim
         - shell:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
 
   - local_servers:
       layout: tiled
       panes:
         - frontend_services:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
             - foreman start -f Procfile.dev.frontend
         - backend_services:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
             - foreman start -f Procfile.dev.backend
         - server:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
             - DEBUG_SQL=true thin -p 9292 start
         - shell:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant

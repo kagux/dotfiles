@@ -10,19 +10,19 @@ windows:
       panes:
         - vim
         - shell:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
   - rails:
       layout: tiled
       panes:
         - shell:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
         - logs:
             - tail -f log/development.log
         - shell:
           - clear
         - server:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
             - foreman start

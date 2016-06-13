@@ -10,19 +10,19 @@ windows:
       panes:
         - vim
         - shell:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
   - rails:
       layout: tiled
       panes:
         - shell:
-            - vagrant ssh
+            - ssh -F .vagrant-ssh.local default
             - cd /vagrant
         - logs:
             - tail -f log/development.log
         - webpack:
           - ./node_modules/.bin/webpack-dev-server --config config/webpack.config.js
         - server:
-            - vagrant ssh -- -R 3808:localhost:3808
+            - ssh -F .vagrant-ssh.local default -- -R 3808:localhost:3808
             - cd /vagrant
             - foreman start
