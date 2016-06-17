@@ -2,7 +2,7 @@
 
 name: appstorm
 root: ~/Projects/appstorm
-pre: vagrant up; [ -f .vagrant-ssh.local ] || (vagrant ssh-config --host default> .vagrant-ssh.local)
+pre: vagrant up; vagrant ssh-config --host default> .vagrant-ssh.local
 
 windows:
   - editor:
