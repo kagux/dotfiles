@@ -23,6 +23,6 @@ windows:
         - webpack:
           - ./node_modules/.bin/webpack-dev-server --config config/webpack.config.babel.js
         - server:
-            - ssh -F .vagrant-ssh.local default -- -R 3809:localhost:3809
+            - ssh -F .vagrant-ssh.local -R 3809:localhost:3809 default
             - cd /vagrant
             - foreman start
