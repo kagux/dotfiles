@@ -32,7 +32,7 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'djoshea/vim-autoread'
 
 " Syntax check
-Plug 'blueyed/neomake', { 'branch': 'process-by-tabwin' }
+Plug 'blueyed/neomake'
 
 " rainbow parentheses
 Plug 'kien/rainbow_parentheses.vim'
@@ -114,9 +114,6 @@ Plug '2072/PHP-Indenting-for-VIm'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 
-"fast search in files
-Plug 'rking/ag.vim'
-
 "yaml
 Plug 'chase/vim-ansible-yaml'
 
@@ -125,10 +122,16 @@ Plug 'christoomey/vim-tmux-navigator'
 
 "elixir
 Plug 'elixir-lang/vim-elixir'
+Plug 'slashmili/alchemist.vim'
+nnoremap <silent> H :call alchemist#exdoc()<CR>
 
 "golang
 Plug 'fatih/vim-go'
-"
+
+
+"fast search in files
+Plug 'rking/ag.vim'
+
 " autocomplete
 function! DoRemote(arg)
   UpdateRemotePlugins
@@ -236,6 +239,7 @@ nnoremap K :Ag<CR>
 nnoremap \ :Ag<SPACE>
 
 " config fzf as ctrlp
+let $FZF_DEFAULT_COMMAND= 'ag -g ""'
 let g:fzf_action = {
       \ 'ctrl-s': 'split',
       \ 'ctrl-v': 'vsplit',
@@ -255,6 +259,7 @@ noremap <Leader>u :call PhpInsertUse()<CR>
 """"""" Autosave and syntax check """""""""""""""""""""""""
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
+let g:auto_save_events = ["InsertLeave", "TextChanged", "CursorHold", "CompleteDone"]
 
 :autocmd TextChanged,BufEnter,BufWrite,BufWrite * :Neomake
 
@@ -317,3 +322,6 @@ let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 let g:go_fmt_autosave = 0
+
+" Ctrl-c as Esc
+inoremap <C-c> <Esc>

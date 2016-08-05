@@ -1,0 +1,25 @@
+  name: find_my_moto
+  root: ~/Projects/find_my_moto
+  pre:  ./bin/docker-dev init postgresql
+
+  windows:
+    - editor:
+        layout: cf41,181x45,0,0{117x45,0,0,0,63x45,118,0[63x22,118,0,2,63x22,118,23,6]}
+        panes:
+          - vim
+          - web_console:
+            - ./bin/docker-dev run --name web_console --no-deps web
+          - shell:
+            - eval $(dinghy env)
+    - phoenix:
+        layout: tiled
+        panes:
+          - shell:
+            - eval $(dinghy env)
+          - shell:
+            - eval $(dinghy env)
+          - psql:
+             - ./bin/docker-dev exec postgresql psql -Ufmm
+          - web:
+            - ./bin/docker-dev run --name npm_install --no-deps -u $UID -e HOME=/app web bash -c "npm install" \
+              && ./bin/docker-dev run -u $UID -e HOME=/app --name phoenix --no-deps --service-ports web mix phoenix.server
