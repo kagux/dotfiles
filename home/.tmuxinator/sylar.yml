@@ -1,0 +1,25 @@
+  name: sylar
+  root: ~/Projects/sylar
+  pre:  ./bin/docker-launcher init
+
+  windows:
+    - editor:
+        layout: cf41,181x45,0,0{117x45,0,0,0,63x45,118,0[63x22,118,0,2,63x22,118,23,6]}
+        panes:
+          - vim
+          - web_console:
+            - ./bin/docker-launcher web_console
+          - shell:
+            - eval $(dinghy env)
+    - phoenix:
+        layout: tiled
+        panes:
+          - shell:
+            - eval $(dinghy env)
+          - shell:
+            - eval $(dinghy env)
+          - psql:
+             - ./bin/docker-launcher psql
+          - web:
+            - ./bin/docker-launcher server
+

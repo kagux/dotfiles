@@ -15,6 +15,11 @@ Plug 'bling/vim-airline'
 Plug 'janko-m/vim-test'
 Plug 'nelstrom/vim-qargs'
 
+" improved increment/decrement
+Plug 'tpope/vim-speeddating'
+
+" improved search
+Plug 'haya14busa/incsearch.vim'
 
 " fuzzy finder
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -325,3 +330,6 @@ let g:go_fmt_autosave = 0
 
 " Ctrl-c as Esc
 inoremap <C-c> <Esc>
+
+" Ctrl-i as ctrl-A to increment
+noremap <C-i> <C-A>
