@@ -1,33 +1,20 @@
 # ~/.tmuxinator/getapp.yml
-
 name: getapp
 root: ~/Projects/getapp
-pre: vagrant up; vagrant ssh-config --host default> .vagrant-ssh.local
+pre: rm -f tmp/clickout_daemon.pid && ./bin/docker-dev clean && ./bin/docker-dev up -d
 
 windows:
   - editor:
-      layout: a7fc,178x48,0,0{115x48,0,0,0,62x48,116,0,2}
+      layout: e66f,272x70,0,0{186x70,0,0,15,85x70,187,0[85x49,187,0,20,85x20,187,50,21]}
       panes:
         - vim
         - shell:
-            - ssh -F .vagrant-ssh.local default
-            - cd /vagrant
+          -
+        - shell2:
+          - ./bin/docker-dev exec getapp bash
 
   - local_servers:
-      layout: tiled
+      layout: even-vertical
       panes:
-        - frontend_services:
-            - ssh -F .vagrant-ssh.local default
-            - cd /vagrant
-            - foreman start -f Procfile.dev.frontend
-        - backend_services:
-            - ssh -F .vagrant-ssh.local default
-            - cd /vagrant
-            - foreman start -f Procfile.dev.backend
-        - server:
-            - ssh -F .vagrant-ssh.local default
-            - cd /vagrant
-            - DEBUG_SQL=true thin -p 9292 start
-        - shell:
-            - ssh -F .vagrant-ssh.local default
-            - cd /vagrant
+        - servers:
+            - ./bin/docker-dev up

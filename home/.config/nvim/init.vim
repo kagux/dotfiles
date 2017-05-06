@@ -13,7 +13,6 @@ Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
 Plug 'bling/vim-airline'
 Plug 'janko-m/vim-test'
-Plug 'nelstrom/vim-qargs'
 
 " improved increment/decrement
 Plug 'tpope/vim-speeddating'
@@ -37,7 +36,7 @@ Plug 'simnalamburt/vim-mundo'
 Plug 'djoshea/vim-autoread'
 
 " Syntax check
-Plug 'blueyed/neomake'
+Plug 'neomake/neomake'
 
 " rainbow parentheses
 Plug 'kien/rainbow_parentheses.vim'
@@ -127,7 +126,8 @@ Plug 'christoomey/vim-tmux-navigator'
 
 "elixir
 Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
+" Plug 'slashmili/alchemist.vim'
+Plug 'epilgrim/alchemist.vim', { 'branch' : 'feature/configurable-current-working-dir' }
 nnoremap <silent> H :call alchemist#exdoc()<CR>
 
 "golang
@@ -142,6 +142,7 @@ function! DoRemote(arg)
   UpdateRemotePlugins
 endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
+Plug 'ervandew/supertab'
 call plug#end()
 
 let mapleader=","
@@ -167,9 +168,11 @@ filetype plugin indent on
 
 """""""" AUTOCOMPLETE
 let g:deoplete#enable_at_startup = 1
-if !exists('g:deoplete#omni#input_patterns')
-  let g:deoplete#omni#input_patterns = {}
-endif
+let g:deoplete#sources={}
+let g:deoplete#sources._=['buffer', 'file', 'ultisnips']
+" if !exists('g:deoplete#omni#input_patterns')
+"   let g:deoplete#omni#input_patterns = {}
+" endif
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType eco set omnifunc=htmlcomplete#CompleteTags
@@ -183,6 +186,7 @@ set completeopt=menuone,longest
 inoremap <silent><expr> <Tab> pumvisible() ? "\<C-n>" : deoplete#mappings#manual_complete()
 inoremap <expr> <C-j> ((pumvisible())?("\<C-n>"):("\<C-j>"))
 inoremap <expr> <C-k> ((pumvisible())?("\<C-p>"):("\<C-k>"))
+let g:SuperTabDefaultCompletionType = "<c-n>"
 
 
 
@@ -319,10 +323,11 @@ if exists("+undofile")
   set undofile
 endif
 
-let g:UltiSnipsExpandTrigger="<s-tab>"
+let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-
+"or you'll miss snippets with short (single or double char) names from Deoplete completion list
+call deoplete#custom#set('ultisnips', 'matchers', ['matcher_fuzzy'])
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
@@ -333,3 +338,5 @@ inoremap <C-c> <Esc>
 
 " Ctrl-i as ctrl-A to increment
 noremap <C-i> <C-A>
+
+let g:localvimrc_persistent=2

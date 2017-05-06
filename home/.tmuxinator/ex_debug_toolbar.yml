@@ -1,9 +1,9 @@
-  name: sylar
-  root: ~/Projects/sylar
+  name: ex_debug_toolbar
+  root: ~/Projects/ex_debug_toolbar_demo
   pre:  ./bin/docker-launcher init
 
   windows:
-    - editor:
+    - demo_editor:
         layout: cf41,181x45,0,0{117x45,0,0,0,63x45,118,0[63x22,118,0,2,63x22,118,23,6]}
         panes:
           - vim
@@ -20,9 +20,19 @@
           - shell:
             - eval $(dinghy env)
           - psql:
-            - eval $(dinghy env)
-            - ./bin/docker-launcher psql
+             - eval $(dinghy env)
+             - ./bin/docker-launcher psql
           - web:
             - eval $(dinghy env)
             - ./bin/docker-launcher server
+    - toolbar_editor:
+        layout: cf41,181x45,0,0{117x45,0,0,0,63x45,118,0[63x22,118,0,2,63x22,118,23,6]}
+        panes:
+          - vim
+          - shell:
+            - eval $(dinghy env)
+            - cd ../ex_debug_toolbar
+          - shell:
+            - eval $(dinghy env)
+            - cd ../ex_debug_toolbar
 
