@@ -8,22 +8,17 @@
         panes:
           - vim
           - web_console:
-            - eval $(dinghy env)
             - ./bin/docker-launcher web_console
           - shell:
             - eval $(dinghy env)
     - phoenix:
         layout: tiled
         panes:
-          - shell:
-            - eval $(dinghy env)
-          - shell:
-            - eval $(dinghy env)
+          - time
+          - time
           - psql:
-             - eval $(dinghy env)
              - ./bin/docker-launcher psql
           - web:
-            - eval $(dinghy env)
             - ./bin/docker-launcher server
     - toolbar_editor:
         layout: cf41,181x45,0,0{117x45,0,0,0,63x45,118,0[63x22,118,0,2,63x22,118,23,6]}
@@ -32,9 +27,7 @@
             - cd ../ex_debug_toolbar
             - vim
           - shell:
-            - eval $(dinghy env)
             - cd ../ex_debug_toolbar
           - shell:
-            - eval $(dinghy env)
             - cd ../ex_debug_toolbar
 

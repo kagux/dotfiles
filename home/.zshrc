@@ -1,12 +1,17 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="ys"
-plugins=(git gitfast ruby)
+plugins=(git gitfast ruby zsh-autosuggestions)
 
 function load_source(){
   [[ -s "$1" ]] && source "$1" 
 }
 
 source $ZSH/oh-my-zsh.sh
+
+# install missing plugins
+if [ ! -d "$ZSH_CUSTOM/plugins/zsh-autosuggestions" ]; then
+  git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+fi
 
 # load RVM
 load_source "$HOME/.rvm/scripts/rvm" 
@@ -37,3 +42,8 @@ alias vim='nvim'
 eval `gnome-keyring-daemon --start 2> /dev/null` 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# dinghy env
+if type "dinghy" > /dev/null; then
+  eval $(dinghy env)
+fi
