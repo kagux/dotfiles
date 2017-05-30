@@ -4,14 +4,16 @@
 
   windows:
     - editor:
-        layout: cf41,181x45,0,0{117x45,0,0,0,63x45,118,0[63x22,118,0,2,63x22,118,23,6]}
+        layout: 50b0,204x51,0,0{129x51,0,0,0,74x51,130,0[74x35,130,0,2,74x15,130,36,3]}
         panes:
           - vim
+          - shell:
+            - eval $(dinghy env)
+            - export POSTGRESQL_HOST=192.168.64.11
+            - export POSTGRESQL_PORT=54321
           - web_console:
             - eval $(dinghy env)
             - ./bin/docker-launcher web_console
-          - shell:
-            - eval $(dinghy env)
     - phoenix:
         layout: tiled
         panes:

@@ -58,10 +58,6 @@ Plug 'unblevable/quick-scope'
 "todo list manager
 Plug 'vitalk/vim-simple-todo'
 
-"sql
-Plug 'dbext.vim'
-Plug 'SQLComplete.vim'
-
 " Apache syntax
 Plug 'apeschel/vim-syntax-apache'
 
@@ -126,8 +122,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 "elixir
 Plug 'elixir-lang/vim-elixir'
-" Plug 'slashmili/alchemist.vim'
-Plug 'epilgrim/alchemist.vim', { 'branch' : 'feature/configurable-current-working-dir' }
+Plug 'slashmili/alchemist.vim'
 nnoremap <silent> H :call alchemist#exdoc()<CR>
 
 "golang
