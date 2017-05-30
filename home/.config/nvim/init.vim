@@ -8,14 +8,10 @@ Plug 'tpope/vim-surround'
 Plug 'Townk/vim-autoclose'
 Plug 'benmills/vimux'
 Plug 'docunext/closetag.vim'
-Plug 'joonty/vdebug'
 Plug 'tpope/vim-commentary'
 Plug 'godlygeek/tabular'
 Plug 'bling/vim-airline'
 Plug 'janko-m/vim-test'
-
-" improved increment/decrement
-Plug 'tpope/vim-speeddating'
 
 " improved search
 Plug 'haya14busa/incsearch.vim'
@@ -29,20 +25,11 @@ Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'kagux/vim-ultisnips-javascript'
 
-" visualize undo tree
-Plug 'simnalamburt/vim-mundo'
-
-" Auto load changes
-Plug 'djoshea/vim-autoread'
-
 " Syntax check
 Plug 'neomake/neomake'
 
 " rainbow parentheses
 Plug 'kien/rainbow_parentheses.vim'
-
-" Automatic resizing of Vim windows to the golden ration
-Plug 'roman/golden-ratio'
 
 " visually displaying indent levels
 Plug 'nathanaelkane/vim-indent-guides'
@@ -90,7 +77,6 @@ Plug 'AndrewRadev/vim-eco'
 Plug 'kchmck/vim-coffee-script'
 
 "js
-Plug 'mustache/vim-mustache-handlebars'
 Plug 'jelera/vim-javascript-syntax'
 Plug 'mxw/vim-jsx'
 Plug 'isRuslan/vim-es6'
@@ -105,10 +91,7 @@ Plug 'slim-template/vim-slim'
 Plug 'kagux/vim-rubocop-autocorrect'
 
 "php
-Plug 'arnaud-lb/vim-php-namespace'
 Plug 'StanAngeloff/php.vim'
-Plug 'evidens/vim-twig'
-Plug '2072/PHP-Indenting-for-VIm'
 
 "git
 Plug 'tpope/vim-fugitive'
@@ -163,14 +146,13 @@ filetype plugin indent on
 
 """""""" AUTOCOMPLETE
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#sources={}
-let g:deoplete#sources._=['buffer', 'file', 'ultisnips']
+" let g:deoplete#sources={}
+" let g:deoplete#sources._=['buffer', 'file', 'ultisnips']
 " if !exists('g:deoplete#omni#input_patterns')
 "   let g:deoplete#omni#input_patterns = {}
 " endif
 
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
-autocmd FileType eco set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 autocmd FileType php set omnifunc=phpcomplete#CompletePHP
@@ -221,7 +203,7 @@ set showcmd
 " toggle nerdtree
 map <leader>f :NERDTreeToggle<CR>
 map <leader>F :NERDTreeFind<CR>
-let g:NERDTreeWinSize=80
+let g:NERDTreeWinSize=50
 
 " vimux config
 
@@ -256,16 +238,13 @@ if filereadable(FILETAG)
     set tags=tags
 endif
 
-inoremap <Leader>u <C-O>:call PhpInsertUse()<CR>
-noremap <Leader>u :call PhpInsertUse()<CR>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """"""" Autosave and syntax check """""""""""""""""""""""""
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
 let g:auto_save_events = ["InsertLeave", "TextChanged", "CursorHold", "CompleteDone"]
 
-:autocmd TextChanged,BufEnter,BufWrite,BufWrite * :Neomake
+autocmd! BufWritePost * Neomake
 
 "
 "This allows for change paste motion cp{motion}
@@ -302,21 +281,6 @@ au Syntax * RainbowParenthesesLoadBraces
 set exrc
 set secure
 
-
-nnoremap <Leader>u :NERDTreeClose<CR>:GundoToggle<CR>
-
-if exists("+undofile")
-  " undofile - This allows you to use undos after exiting and restarting
-  " This, like swap and backups, uses .vim-undo first, then ~/.vim/tmp/undo
-  " :help undo-persistence
-  " This is only present in 7.3+
-  if isdirectory($HOME . '/.config/tmp/undo') == 0
-    :silent !mkdir -p ~/.config/tmp/undo > /dev/null 2>&1
-  endif
-  set undodir=./.vim-undo//
-  set undodir+=~/.config/tmp/undo//
-  set undofile
-endif
 
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"

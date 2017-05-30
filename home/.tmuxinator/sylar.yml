@@ -9,8 +9,8 @@
           - vim
           - shell:
             - eval $(dinghy env)
-            - export POSTGRESQL_HOST=192.168.64.11
-            - export POSTGRESQL_PORT=54321
+            - export POSTGRESQL_HOST=$(dinghy env | head -1 | cut -d "/" -f 3 | cut -d ":" -f 1)
+            - export POSTGRESQL_PORT=$(docker inspect --format='{{(index (index .NetworkSettings.Ports "5432/tcp") 0).HostPort}}' sylar_postgresql_1)
           - web_console:
             - eval $(dinghy env)
             - ./bin/docker-launcher web_console
