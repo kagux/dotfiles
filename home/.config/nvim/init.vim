@@ -216,6 +216,7 @@ let g:test#strategy = 'vimux'
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
+nmap <silent> <leader>aa :TestSuite --only async<CR>
 nmap <silent> <leader>l :TestLast<CR>
 
 " Silversearcher config
@@ -299,3 +300,9 @@ inoremap <C-c> <Esc>
 noremap <C-i> <C-A>
 
 let g:localvimrc_persistent=2
+
+" use an undo file
+set undofile
+set undodir=$HOME/.config/tmp/undo
+set undolevels=1000
+set undoreload=10000
