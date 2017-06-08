@@ -34,6 +34,9 @@ alias ./bin/rspec='bundle exec ./bin/rspec'
 # neovim -> vim
 alias vim='nvim'
 
+# git aliases
+alias git_diff="git log --graph --pretty=format:'%Cred%h%Creset[%an] -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative"
+
 eval `gnome-keyring-daemon --start 2> /dev/null` 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
