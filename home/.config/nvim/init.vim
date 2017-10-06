@@ -105,7 +105,7 @@ Plug 'christoomey/vim-tmux-navigator'
 
 "elixir
 Plug 'elixir-lang/vim-elixir'
-Plug 'slashmili/alchemist.vim'
+Plug 'slashmili/alchemist.vim', { 'branch': 'elixir-sense' }
 nnoremap <silent> H :call alchemist#exdoc()<CR>
 
 "golang
@@ -216,7 +216,7 @@ let g:test#strategy = 'vimux'
 nmap <silent> <leader>t :TestNearest<CR>
 nmap <silent> <leader>T :TestFile<CR>
 nmap <silent> <leader>a :TestSuite<CR>
-nmap <silent> <leader>aa :TestSuite --only async<CR>
+" nmap <silent> <leader>aa :TestSuite --only async<CR>
 nmap <silent> <leader>l :TestLast<CR>
 
 " Silversearcher config
@@ -243,7 +243,7 @@ endif
 """"""" Autosave and syntax check """""""""""""""""""""""""
 let g:auto_save = 1
 let g:auto_save_in_insert_mode = 0
-let g:auto_save_events = ["InsertLeave", "TextChanged", "CursorHold", "CompleteDone"]
+" let g:auto_save_events = ["InsertLeave", "TextChanged", "CursorHold", "CompleteDone"]
 
 autocmd! BufWritePost * Neomake
 

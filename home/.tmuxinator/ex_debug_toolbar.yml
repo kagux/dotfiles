@@ -6,12 +6,13 @@
     - demo_editor:
         layout: cf41,181x45,0,0{117x45,0,0,0,63x45,118,0[63x22,118,0,2,63x22,118,23,6]}
         panes:
-          - vim
+          - vim:
+            - cd ex_debug_toolbar
+            - vim
+          - shell:
+            - cd ex_debug_toolbar
           - web_console:
             - ./bin/docker-launcher web_console
-          - shell:
-            - eval $(dinghy env)
-            - cd ex_debug_toolbar
     - phoenix:
         layout: tiled
         panes:

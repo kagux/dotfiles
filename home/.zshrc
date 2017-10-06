@@ -45,3 +45,4 @@ eval `gnome-keyring-daemon --start 2> /dev/null`
 if type "dinghy" > /dev/null; then
   eval $(dinghy env)
 fi
+export PATH="/usr/local/opt/gettext/bin:$PATH"

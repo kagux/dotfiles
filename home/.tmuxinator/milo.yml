@@ -1,5 +1,5 @@
-  name: sylar
-  root: ~/Projects/sylar
+  name: milo
+  root: ~/Projects/milo
   pre:  ./bin/docker-launcher init
 
   windows:
@@ -19,9 +19,8 @@
             - eval $(./bin/docker-launcher env)
           - shell:
             - eval $(./bin/docker-launcher env)
-          - psql:
+          - shell:
             - eval $(./bin/docker-launcher env)
-            - ./bin/docker-launcher psql
           - web:
             - eval $(./bin/docker-launcher env)
             - ./bin/docker-launcher server
