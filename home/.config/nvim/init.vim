@@ -121,6 +121,7 @@ function! DoRemote(arg)
 endfunction
 Plug 'Shougo/deoplete.nvim', { 'do': function('DoRemote') }
 Plug 'ervandew/supertab'
+Plug 'christianrondeau/vim-base64'
 call plug#end()
 
 let mapleader=","

@@ -1,6 +1,9 @@
   name: sylar
   root: ~/Projects/sylar
-  pre:  ./bin/docker-launcher init
+  on_project_first_start: ./bin/docker-launcher init
+  on_project_exit: ./bin/docker-dev clean
+  pre_window: eval $(./bin/docker-launcher env)
+  startup_window: vim
 
   windows:
     - editor:
@@ -8,21 +11,15 @@
         panes:
           - vim
           - shell:
-            - eval $(./bin/docker-launcher env)
           - web_console:
-            - eval $(./bin/docker-launcher env)
             - ./bin/docker-launcher web_console
     - phoenix:
         layout: tiled
         panes:
           - shell:
-            - eval $(./bin/docker-launcher env)
           - shell:
-            - eval $(./bin/docker-launcher env)
           - psql:
-            - eval $(./bin/docker-launcher env)
             - ./bin/docker-launcher psql
           - web:
-            - eval $(./bin/docker-launcher env)
             - ./bin/docker-launcher server
 

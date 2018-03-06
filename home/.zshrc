@@ -20,7 +20,7 @@ export GOPATH=$HOME/Projects/go
 export PATH=$PWD/node_modules/.bin:$GOPATH/bin:$HOME/.rvm/bin:/usr/local/bin:/usr/local/share/npm/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/sbin:/bin:$PATH 
 
 load_source "$HOME/.phpbrew/bashrc"
-load_source "$HOME/.tmux/tmuxinator.zsh"
+load_source "$HOME/.tmuxinator/tmuxinator.zsh"
 
 # alias ruby stuff
 alias rake='noglob bundle exec rake'
@@ -46,3 +46,6 @@ if type "dinghy" > /dev/null; then
   eval $(dinghy env)
 fi
 export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+. "/usr/local/opt/nvm/nvm.sh"
