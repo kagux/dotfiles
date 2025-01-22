@@ -47,5 +47,5 @@ if type "dinghy" > /dev/null; then
 fi
 export PATH="/usr/local/opt/gettext/bin:$PATH"
 
-export NVM_DIR="$HOME/.nvm"
-. "/usr/local/opt/nvm/nvm.sh"
+#export NVM_DIR="$HOME/.nvm"
+#. "/usr/local/opt/nvm/nvm.sh"
